@@ -5,7 +5,7 @@ const ContentModule = (props) => {
     return (
         <div className="imgContent">
             <img src={props.imgName} alt={props.imgName} />
-            <span>{props.description}</span>
+            <span className="imgContent__span">{props.description}</span>
         </div>
     )
 }

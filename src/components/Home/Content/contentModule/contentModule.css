@@ -8,8 +8,11 @@
 
 }
 .imgContent img {
-    padding-bottom: 15px;
     max-width: 250px;
     max-height: 250px;
-    border-bottom: tomato 3px solid;
+    border: 3px solid burlywood;
+}
+.imgContent__span {
+    margin: 15px;
+    border-top: tomato 3px solid;
 }

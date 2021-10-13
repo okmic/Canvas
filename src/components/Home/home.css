@@ -11,11 +11,13 @@
 .logo {
     max-width: 269px;
     max-height: 173px;
+    border-radius: 50px ;
     position: relative;
     top: 0;
     left: 0;
     margin: 15px auto;
     padding: 15x;
+    overflow: hidden;
 }
 .title {
     position: relative;
