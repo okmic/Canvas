@@ -1,0 +1,20 @@
+.logoCanvas {
+    max-width: 269px;
+    max-height: 173px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 15px auto;
+}
+.contCanvas{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 30px auto;
+    padding-bottom: 30px;
+    max-width: 1180px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #ffffff;;
+}

@@ -1,0 +1,26 @@
+.content__container{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    max-width: 1150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imgContent{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-height: 100%;
+    max-width: 270px;
+    margin: 70px 50px;
+
+}
+.imgContent img {
+    padding-bottom: 15px;
+    max-width: 250px;
+    max-height: 250px;
+    border-bottom: tomato 3px solid;
+}

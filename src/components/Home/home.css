@@ -1,0 +1,60 @@
+.conteinerHome {
+    max-width: 1180px;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow: hidden;
+}
+.logo {
+    max-width: 269px;
+    max-height: 173px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 15px auto;
+    padding: 15x;
+}
+.title {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title .borderBlack { 
+    min-width: 500px;  
+    padding: 15px; 
+    color: black;
+    border-top: black 2px solid;
+    border-bottom: black 1px solid;}
+.koni{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    margin: 15px 0; 
+}
+.conteinerContent{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    .koni{display: none;}
+    .title{display: none;}
+}
