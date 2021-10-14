@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Canvas/static/css/main.4eb1aa5d.chunk.css",
-    "main.js": "/Canvas/static/js/main.b3cabac6.chunk.js",
-    "main.js.map": "/Canvas/static/js/main.b3cabac6.chunk.js.map",
-    "runtime-main.js": "/Canvas/static/js/runtime-main.d4d3bd24.js",
-    "runtime-main.js.map": "/Canvas/static/js/runtime-main.d4d3bd24.js.map",
-    "static/js/2.c7ace575.chunk.js": "/Canvas/static/js/2.c7ace575.chunk.js",
-    "static/js/2.c7ace575.chunk.js.map": "/Canvas/static/js/2.c7ace575.chunk.js.map",
-    "static/js/3.c7c5a3e9.chunk.js": "/Canvas/static/js/3.c7c5a3e9.chunk.js",
-    "static/js/3.c7c5a3e9.chunk.js.map": "/Canvas/static/js/3.c7c5a3e9.chunk.js.map",
+    "main.css": "/Canvas/static/css/main.5eeb9429.chunk.css",
+    "main.js": "/Canvas/static/js/main.e107c1e9.chunk.js",
+    "main.js.map": "/Canvas/static/js/main.e107c1e9.chunk.js.map",
+    "runtime-main.js": "/Canvas/static/js/runtime-main.3c52b8b5.js",
+    "runtime-main.js.map": "/Canvas/static/js/runtime-main.3c52b8b5.js.map",
+    "static/js/2.2ef4c9ad.chunk.js": "/Canvas/static/js/2.2ef4c9ad.chunk.js",
+    "static/js/2.2ef4c9ad.chunk.js.map": "/Canvas/static/js/2.2ef4c9ad.chunk.js.map",
+    "static/js/3.8b674b93.chunk.js": "/Canvas/static/js/3.8b674b93.chunk.js",
+    "static/js/3.8b674b93.chunk.js.map": "/Canvas/static/js/3.8b674b93.chunk.js.map",
     "index.html": "/Canvas/index.html",
-    "precache-manifest.117fc8a074544b8a1d3b4611a8512150.js": "/Canvas/precache-manifest.117fc8a074544b8a1d3b4611a8512150.js",
+    "precache-manifest.5a709830a3a82242475baf38ce1bf56d.js": "/Canvas/precache-manifest.5a709830a3a82242475baf38ce1bf56d.js",
     "service-worker.js": "/Canvas/service-worker.js",
-    "static/css/main.4eb1aa5d.chunk.css.map": "/Canvas/static/css/main.4eb1aa5d.chunk.css.map",
-    "static/js/2.c7ace575.chunk.js.LICENSE.txt": "/Canvas/static/js/2.c7ace575.chunk.js.LICENSE.txt",
+    "static/css/main.5eeb9429.chunk.css.map": "/Canvas/static/css/main.5eeb9429.chunk.css.map",
+    "static/js/2.2ef4c9ad.chunk.js.LICENSE.txt": "/Canvas/static/js/2.2ef4c9ad.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/Canvas/static/media/1.4b6bdd1d.jpg",
     "static/media/10.jpg": "/Canvas/static/media/10.6cf86829.jpg",
     "static/media/11.jpg": "/Canvas/static/media/11.d148b27b.jpg",
@@ -40,9 +40,9 @@
     "static/media/logok.jpg": "/Canvas/static/media/logok.843bb3af.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d4d3bd24.js",
-    "static/js/2.c7ace575.chunk.js",
-    "static/css/main.4eb1aa5d.chunk.css",
-    "static/js/main.b3cabac6.chunk.js"
+    "static/js/runtime-main.3c52b8b5.js",
+    "static/js/2.2ef4c9ad.chunk.js",
+    "static/css/main.5eeb9429.chunk.css",
+    "static/js/main.e107c1e9.chunk.js"
   ]
 }
