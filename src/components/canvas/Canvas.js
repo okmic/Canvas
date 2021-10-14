@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './canvas.css';
 import PaintingDate from './painting/Painting';
 import logo from '../img/logo.png';
@@ -17,10 +17,26 @@ import www from '../img/canvas/12.jpg';
 import e from '../img/canvas/13.jpg';
 import ee from '../img/canvas/14.jpg';
 import eee from '../img/canvas/15.jpg';
+import PreloaderContainer from '../common/Preloader/PreloaderContainer';
 
 const Paintings = (props) => {
+    const [loading, setLoading] = useState(undefined)
+    const [completed, setCompleted] = useState(undefined)
+
+    useEffect(() => {
+    setTimeout(
+        () => {
+            setLoading(true)
+            setTimeout(
+                () => {
+                   setCompleted(true)
+                }, 1000)
+        }, 1500)
+}, [loading])
+
     return (
-        <div>
+        !completed ? <PreloaderContainer />
+        :<div>
         <div className="logoCanvas">
         <img src={logo} alt={"Art Fine on Canvas"} />
         </div>

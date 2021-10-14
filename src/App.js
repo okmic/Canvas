@@ -14,21 +14,25 @@ import Basket from './components/basket/Basket'
 
 
 
+
 /* import Lesson from './components/modal/Modal'; */
 
 
 
 function App(props) {
-  return (
 
+  return (
         <div className="container__app">
           <Navbar />
         <div className="contOne">
           <div className="content">
             <ScrollToTop />
             <Switch>
-            <Route  path='/Home' render={() => <Home />} />
-            <Route path='/Gallery' render={() => <Paintings />} />
+            <Route  path='/Home'  render={() => <Home />} />
+
+            <Route path='/Gallery' 
+            render={() => <Paintings />} />
+
             <Route path='/Basket' render={() => <Basket />} />
             <Route path='/Contacts' render={() => <Contact />} />
             <Redirect from="/" to="/Home" />
@@ -38,15 +42,15 @@ function App(props) {
         <div className="conteinerContent">
         <Footer />
         </div>
-      </div>
-
+      </div> 
       
-
   );
 }
 
 const mapStateToProps = (state) => ({
+  initialized: state.appReducer,
   messages: state.canvasReduser
+
 })
 
 let AppContainer =  connect(mapStateToProps)(App)

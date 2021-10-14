@@ -1,0 +1,9 @@
+.preloader_cotnainer {
+  position: absolute;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}

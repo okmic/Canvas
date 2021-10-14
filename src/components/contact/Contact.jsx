@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './contact.css';
 import logok from '../img/logok.jpg'
+import PreloaderContainer from '../common/Preloader/PreloaderContainer';
 
 
 const Contact = (props) => {
+    const [loading, setLoading] = useState(undefined)
+    const [completed, setCompleted] = useState(undefined)
+
+    useEffect(() => {
+    setTimeout(
+        () => {
+            setLoading(true)
+            setTimeout(
+                () => {
+                   setCompleted(true)
+                }, 1000)
+        }, 1500)
+}, [loading])
+
     return (
+        !completed ? <PreloaderContainer />
+        :
         <div className="contact">
             <img src={logok} alt="Art Fine on Canvas" className="logoContact"/>
            <div className="boxDate">

@@ -8,9 +8,10 @@ import kontFour from '../../img/imgh4.png';
 import kontFive from '../../img/imgh5.png';
 import kontSi from '../../img/imgh6.png';
 
+
 const Content = (props) => {
     return (
-        <div className="content__container">
+         <div className="content__container">
             <ContentModule imgName={kontOne} description="Если вы хотите обоготить Ваш интерьер или сделать кому-либо подарок - Вы зашли по адресу!" />
             <ContentModule imgName={kontTwo} description="В этом году тема - будущее путешествий. Приходите к нам! Вы не разочаруетесь!" />
             <ContentModule imgName={kontFhree} description="Вы всегда можете предложить нам свою работую. Художник напишет ее с минимальными изменениями." />

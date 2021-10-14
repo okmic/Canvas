@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import PreloaderContainer from "../common/Preloader/PreloaderContainer";
 import s from './Basket.module.css'
 
 let Basket = (props) => {
+    const [loading, setLoading] = useState(undefined)
+    const [completed, setCompleted] = useState(undefined)
+
+    useEffect(() => {
+    setTimeout(
+        () => {
+            setLoading(true)
+            setTimeout(
+                () => {
+                   setCompleted(true)
+                }, 1000)
+        }, 1500)
+}, [loading])
+
     return(
-        <div className={s.basket__container}>
+        !completed ? <PreloaderContainer />
+        : <div className={s.basket__container}>
             <span>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis ratione eaque sint facilis facere praesentium rem fuga architecto nesciunt ipsa, in corporis sit, ducimus non repellat eveniet ad officiis illum?
             Ex aspernatur, tempora fuga velit saepe vero, voluptatum nobis labore incidunt temporibus soluta expedita aut veritatis aperiam unde harum! Dignissimos corporis esse nisi sint similique. Pariatur soluta quae doloribus id.

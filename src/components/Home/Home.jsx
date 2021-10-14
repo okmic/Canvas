@@ -1,14 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.css';
 import logo from '../img/logo.png'
 import koni from '../img/koni.jpg'
 import Content from './Content/Content';
 import Contact from '../contact/Contact';
+import PreloaderContainer from '../common/Preloader/PreloaderContainer';
 
 
 const Home = (props) => {
+
+    const [loading, setLoading] = useState(undefined)
+    const [completed, setCompleted] = useState(undefined)
+
+    useEffect(() => {
+    setTimeout(
+        () => {
+            setLoading(true)
+            setTimeout(
+                () => {
+                   setCompleted(true)
+                }, 1000)
+        }, 1500)
+}, [loading])
+
     return (
-        <div>
+        !completed 
+        ? <PreloaderContainer /> 
+        :   <div>
             <div className="conteinerHome">
                 <div className="logo">
                     <img src={logo} alt={"Art Fine on Canvas"} />
@@ -25,7 +43,7 @@ const Home = (props) => {
             <Content />
             <Contact />
         </div>
-    )
+        )
 }
 
 export default Home
