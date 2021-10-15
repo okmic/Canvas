@@ -10,6 +10,7 @@ import kontSi from '../../img/imgh6.png';
 
 
 const Content = (props) => {
+
     return (
          <div className="content__container">
             <ContentModule imgName={kontOne} description="Если вы хотите обоготить Ваш интерьер или сделать кому-либо подарок - Вы зашли по адресу!" />

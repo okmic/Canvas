@@ -19,6 +19,8 @@ import ee from '../img/canvas/14.jpg';
 import eee from '../img/canvas/15.jpg';
 import PreloaderContainer from '../common/Preloader/PreloaderContainer';
 
+/* const logo = lazy(() => import('../img/logo.png')) */
+
 const Paintings = (props) => {
     const [loading, setLoading] = useState(undefined)
     const [completed, setCompleted] = useState(undefined)
@@ -37,9 +39,11 @@ const Paintings = (props) => {
     return (
         !completed ? <PreloaderContainer />
         :<div>
+        
         <div className="logoCanvas">
-        <img src={logo} alt={"Art Fine on Canvas"} />
+        <img src={logo} alt={"Fine Art on Canvas"} />
         </div>
+        
         <div className='contCanvas'> 
         <PaintingDate imgName={vlesu} description="В лесу"/>
         <PaintingDate imgName={cveti} description="Подсолнухи"/>
