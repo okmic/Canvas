@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ecff3a5b9aa62c992472ccd9783fc909",
+    "revision": "3cb56dd3a8d84a2ca7c36c47c6fe97cf",
     "url": "/Canvas/index.html"
   },
   {
-    "revision": "02f0c26e9e1711d9c9b8",
-    "url": "/Canvas/static/css/3.40320037.chunk.css"
+    "revision": "c03b49ba80c291edd49f",
+    "url": "/Canvas/static/css/3.525d22ef.chunk.css"
   },
   {
-    "revision": "4fe1997e291bfdd39fbb",
+    "revision": "8dd91c3b09eb87de7790",
     "url": "/Canvas/static/css/4.451bf2e4.chunk.css"
   },
   {
-    "revision": "0edbd632ed71c1e0e613",
-    "url": "/Canvas/static/css/main.047f9e22.chunk.css"
+    "revision": "3ed1cdf0b78f87653b63",
+    "url": "/Canvas/static/css/main.726391f1.chunk.css"
   },
   {
     "revision": "7625d3368172466eb671",
@@ -24,24 +24,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Canvas/static/js/2.262c6274.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "02f0c26e9e1711d9c9b8",
-    "url": "/Canvas/static/js/3.e9f12b08.chunk.js"
+    "revision": "c03b49ba80c291edd49f",
+    "url": "/Canvas/static/js/3.4cd1a61c.chunk.js"
   },
   {
-    "revision": "4fe1997e291bfdd39fbb",
-    "url": "/Canvas/static/js/4.20d069ab.chunk.js"
+    "revision": "8dd91c3b09eb87de7790",
+    "url": "/Canvas/static/js/4.82296a76.chunk.js"
   },
   {
-    "revision": "a40f4fddd0b701f9baad",
-    "url": "/Canvas/static/js/5.86bb7691.chunk.js"
+    "revision": "892923880c809a36f283",
+    "url": "/Canvas/static/js/5.0904d1e6.chunk.js"
   },
   {
-    "revision": "0edbd632ed71c1e0e613",
-    "url": "/Canvas/static/js/main.10e9ccd9.chunk.js"
+    "revision": "3ed1cdf0b78f87653b63",
+    "url": "/Canvas/static/js/main.858989e4.chunk.js"
   },
   {
-    "revision": "3d9339972420b5baebab",
-    "url": "/Canvas/static/js/runtime-main.f515757c.js"
+    "revision": "44f2cb768ddca1387ce7",
+    "url": "/Canvas/static/js/runtime-main.d15e341b.js"
   },
   {
     "revision": "4b6bdd1d3a65341fd06d8cdcc1578cf1",
