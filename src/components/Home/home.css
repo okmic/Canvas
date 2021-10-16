@@ -1,3 +1,6 @@
+.container__home{
+    width: 100vw;
+}
 .conteinerHome {
     max-width: 1180px;
     height: 100%;
@@ -56,7 +59,7 @@ img {
     max-width: 100%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
     .koni{display: none;}
     .title{display: none;}
 }

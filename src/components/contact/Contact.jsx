@@ -15,7 +15,7 @@ const Contact = (props) => {
             setTimeout(
                 () => {
                    setCompleted(true)
-                }, 1000)
+                }, 500)
         }, 1500)
 }, [loading])
 

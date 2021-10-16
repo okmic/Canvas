@@ -1,26 +1,32 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Modal from '../../common/Modal/Modal';
+import Accordion from './Accordion/Accordion';
 import './painting.css';
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+
+
 
 const PaintingDate = (props) => {
-    useEffect(()=>{
-        Aos.init({
-            duration: 1000
-        })
-    }, [])
+
+    const [modal, setModal] = useState(false)
+
     return (
-        <div  className='contPainting'>
+   <div  className='contPainting'>
             <div className="boxPainting">
-                <div   className="painting" data-aos="flip-left">
-                    <LazyLoadImage src={props.imgName} alt={props.imgName} effect="blur" />
+                <div   className="painting">
+                    <LazyLoadImage onClick={() => setModal(true)} src={props.imgName} alt={props.imgName} effect="blur" />
                 </div>
                 <div className="description">
-                    <span>{props.description}</span>
+                    <ul className="description__ul">
+                        <li> </li><br/>
+                        <Accordion paintingName={props.paintingName} price={props.price} description={props.description} />
+                    </ul>
                 </div>
+                <Modal active={modal} setActive={setModal}> 
+                <img src={props.imgName} alt={props.imgName} />
+                </Modal>
             </div>
-        </div>
+        </div> 
     )
 }
 

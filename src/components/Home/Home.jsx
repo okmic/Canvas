@@ -26,7 +26,7 @@ const Home = (props) => {
     return (
         !completed 
         ? <PreloaderContainer /> 
-        :   <div>
+        :   <div className="container__home">
             <div className="conteinerHome">
                 <div className="logo">
                     <img src={logo} alt={"Art Fine on Canvas"} />

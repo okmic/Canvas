@@ -7,29 +7,47 @@
 }
 .boxPainting{
     background-color: #964b00;
-    max-width: 100%;
+    width: 90vw ;
+    max-width: 750px;
     max-height: 100%;
     border:#D1BC8A 1px solid;
     border-radius: 15px;
     margin: 15px;
+    padding: 5px 5px 15px 0px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.308) ;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .painting{
     min-width: 150px;
-    max-width: 500px;
-    background-color: #55504b;;
-    color: rgb(0, 0, 0);
+    max-height: 100%;
     text-align: center;
-    margin: 15px 15px 0 15px;
-    padding: 5px;
-    border: rgb(43, 37, 37) double 25px;
+    margin: 5px 0;
+    padding: 5px 0;
     overflow: hidden;
+
 }
 .description{
+    word-wrap: break-word;
     padding: 5px;
-    text-align: center;
 }
-.painting img{    
-    max-width: 300px;
-    margin: 0 0 -5px -15px;
+.painting img{ 
+    background-color: #55504b;
+    border: rgb(43, 37, 37) double 25px;
+    max-width: 250px;
+}
+
+.description__ul{
+    text-decoration: none ;
+    list-style-type: none ;
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+@media screen and (max-width:750px) {
+    .painting img{ 
+        max-width: 70%;
+    }
 }

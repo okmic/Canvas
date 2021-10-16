@@ -13,8 +13,8 @@ let Basket = (props) => {
             setTimeout(
                 () => {
                    setCompleted(true)
-                }, 1000)
-        }, 1500)
+                }, 500)
+        }, 1000)
 }, [loading])
 
     return(
