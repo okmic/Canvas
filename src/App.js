@@ -2,17 +2,16 @@ import React, { lazy, Suspense } from 'react'
 import './App.css'
 import store from './redux/store'
 import Navbar from './components/navBar/Navbar'
-
 import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import Contact from './components/contact/Contact'
 import ScrollToTop from './ScrollToTop'
 import { connect, Provider } from 'react-redux'
-import Basket from './components/basket/Basket'
 import PreloaderContainer from './components/common/Preloader/PreloaderContainer'
+import BasketContainer from './components/basket/BasketContainer'
 
-const Paintings = lazy(() => import('./components/canvas/Canvas'))
+const PaintingsContainer = lazy(() => import('./components/canvas/CanvasContainer'))
 
 
 /* import Lesson from './components/modal/Modal'; */
@@ -32,9 +31,9 @@ function App(props) {
             <Route  path='/Home'  render={() => <Home />} />
 
             <Route path='/Gallery' 
-            render={() => <Paintings />} />
+            render={() => <PaintingsContainer />} />
 
-            <Route path='/Basket' render={() => <Basket />} />
+            <Route path='/Basket' render={() => <BasketContainer />} />
             <Route path='/Contacts' render={() => <Contact />} />
             <Redirect from="/" to="/Home" />
             </Switch>

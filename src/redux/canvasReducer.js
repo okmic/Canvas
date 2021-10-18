@@ -1,6 +1,7 @@
-const SEND_MESSAGE = 'SEND_MESSAGE';
+const SEND_BASKET = 'SEND_BASKET';
 
 let initialState = { 
+    basket: [],
     dialogs: [
         {id: 1, name: 'Dimych'},
         {id: 2, name: 'Andrew'},
@@ -20,17 +21,23 @@ let initialState = {
 
 const canvasReduser = (state = initialState, action) => {
     switch (action.type) {
-        case SEND_MESSAGE:
-            let body = action.newMessageBody;
+        case SEND_BASKET:
+            let body = action.body;
+            console.log("added body")
             return {
                 ...state,
-                messages: [...state.messages, {id: 6, message: body}]
+                basket: [...state.basket, {imgName: body}]
             };
         default:
             return state;
     }
 }
 
-export const sendMessageCreator = (newMessageBody) => ({type: SEND_MESSAGE, newMessageBody})
+export const sendBasket = (body) => ({type: SEND_BASKET, body})
+
+export const initializeApp = (body) => (dispatch) => {
+            dispatch(sendBasket(body));
+}
+
 
 export default canvasReduser
