@@ -7,7 +7,6 @@
     left: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
     opacity: 0;
     pointer-events: none;
     transition: 0.5s;
@@ -21,23 +20,24 @@
 }
 
 .modal__content {
-    padding: 20px;
-    border-radius: 15px;
-    background-color: #964b00;
-    transform: scale(0.5);
+    margin-top: 15px;
+    max-width: 90%;
+    max-height: 85%;
+    transform: scale(0);
     transition: 0.4s all;
     display: flex;
     justify-content: center;
+    overflow: auto;
 }
-
 
 .modal__content.active {
-    transform: scale(0.7);
+    transform: scale(1);
 }
 
-.modal__content img{
-    max-height: 1300px;
-    max-width: 90vw;
+.content{
+    background-color:#964b00;
+    display: inline-block;
+    border: white 15px double;
 }
 
 .closeModal{
@@ -49,18 +49,3 @@
     color: white;
 }
 
-@media screen and (max-width: 1300px) {
-    .modal__content img{
-        max-height: 900px;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .modal__content.active {
-        transform: scale(1);
-    }
-    .modal__content {
-        display: block;
-        max-height: 390px;
-    }
-}

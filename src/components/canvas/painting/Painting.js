@@ -9,7 +9,7 @@ import './painting.css';
 const PaintingDate = (props) => {
 
     const [modal, setModal] = useState(false)
-
+    
     return (
    <div  className='contPainting'>
             <div className="boxPainting">

@@ -8,6 +8,11 @@
 }
 .accordion_title ul li {
     list-style-type: none;
+    cursor: pointer;
+}
+
+.description__container{
+    transition: 1s;
 }
 
 .accordion_description{
@@ -20,20 +25,29 @@
     border-right: white 1px solid;
     border-radius: 15px;
     font-size: 15px;
-    transform: scale(0);
+    opacity:0;
+    transition: 1s; 
+    animation: show 1s 1 forwards; 
 }
-
-.accordion_description.active {
-    transform: scale(0.7);
-}
-
 
 .title_event_accordion{
     cursor: pointer;
 }
 .title_event_accordion:hover {
+    transition: 0.5s;
     color: #89b3e4;
 }
+
+@keyframes show{
+    0%{
+    opacity:0;
+    transform: translateY(-50px);
+    }
+    100% {
+    opacity:1;
+    transform: translateY(0);
+    }
+    }
 
 @media screen and (max-width: 750px) {
     .accordion_title {

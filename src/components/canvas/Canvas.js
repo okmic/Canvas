@@ -38,8 +38,8 @@ const Paintings = (props) => {
 }, [loading])
 
     return (
-        !completed ? <PreloaderContainer />
-        :<div>
+/*         !completed ? <PreloaderContainer />
+        : */<div>
         
         <div className="logoCanvas">
         <img src={logo} alt={"Fine Art on Canvas"} />

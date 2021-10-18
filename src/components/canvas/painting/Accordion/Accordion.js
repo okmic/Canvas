@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./Accordion.module.css"
-import Aos from "aos";
-import 'aos/dist/aos.css'
+import DescriptionAccord from "./DescriptionAccord";
 
 const Accordion = (props) => {
 
-    const [description, setDescription] = useState(false)
-    useEffect(()=> {
-        Aos.init({
-            duration: 1100
-        })
-    })
-
+    const [descriptionAccord, setDescriptionAccord] = useState(false)
 
     return(
         <div className={styles.accordion_container}> 
@@ -20,16 +13,12 @@ const Accordion = (props) => {
                     <li>{props.paintingName}</li>
                     <li>{props.price} &#8381;</li>
                 </div>
-                <div className={styles.title_event_accordion} onClick={() => setDescription(!description)}>
-                    <li>Описание {description ? <span>&#10006;</span> : <span>&#9660;</span> }</li>
+                <div className={styles.title_event_accordion} onClick={() => setDescriptionAccord(!descriptionAccord)}>
+                    <li>Описание {descriptionAccord ? <span>&#10006;</span> : <span>&#9660;</span> }</li>
                     
                 </div> 
             </div>
-            {description &&
-            <div className={styles.accordion_description} data-aos="zoom-out-down">
-                <p>{props.description}</p>
-            </div>
-            }
+        <DescriptionAccord descriptionAccord={descriptionAccord} setDescriptionAccord={setDescriptionAccord} {...props} />
         </div>
     )
 }

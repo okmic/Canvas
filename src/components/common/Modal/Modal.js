@@ -6,7 +6,7 @@ import styles from './Modal.module.css'
             <div className={active ? styles.modal + " " + styles.active : styles.modal } onClick={() => setActive(false)}>
                 <div className={active ? styles.modal__content + " " + styles.active : styles.modal__content } onClick={e => e.stopPropagation()}>
                 <b className={styles.closeModal} onClick={() => setActive(false)} >&#10006;</b>
-                    {children}
+                   <div className={styles.content}> {children} </div>
                 </div>
             </div>
      )
