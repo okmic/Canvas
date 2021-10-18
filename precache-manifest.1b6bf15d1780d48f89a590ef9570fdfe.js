@@ -1,18 +1,14 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3cb56dd3a8d84a2ca7c36c47c6fe97cf",
+    "revision": "03ce600a56c649a4c98f628f172c2bce",
     "url": "/Canvas/index.html"
   },
   {
-    "revision": "c03b49ba80c291edd49f",
-    "url": "/Canvas/static/css/3.525d22ef.chunk.css"
+    "revision": "7e2e9301db99380f0654",
+    "url": "/Canvas/static/css/3.1e631bf3.chunk.css"
   },
   {
-    "revision": "8dd91c3b09eb87de7790",
-    "url": "/Canvas/static/css/4.451bf2e4.chunk.css"
-  },
-  {
-    "revision": "3ed1cdf0b78f87653b63",
+    "revision": "016121a93752e88e7535",
     "url": "/Canvas/static/css/main.726391f1.chunk.css"
   },
   {
@@ -24,24 +20,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Canvas/static/js/2.262c6274.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c03b49ba80c291edd49f",
-    "url": "/Canvas/static/js/3.4cd1a61c.chunk.js"
+    "revision": "7e2e9301db99380f0654",
+    "url": "/Canvas/static/js/3.a31eb13f.chunk.js"
   },
   {
-    "revision": "8dd91c3b09eb87de7790",
-    "url": "/Canvas/static/js/4.82296a76.chunk.js"
+    "revision": "b3dbb06412d9dbfbdbc6",
+    "url": "/Canvas/static/js/4.1e72de37.chunk.js"
   },
   {
-    "revision": "892923880c809a36f283",
-    "url": "/Canvas/static/js/5.0904d1e6.chunk.js"
+    "revision": "a40f4fddd0b701f9baad",
+    "url": "/Canvas/static/js/5.86bb7691.chunk.js"
   },
   {
-    "revision": "3ed1cdf0b78f87653b63",
-    "url": "/Canvas/static/js/main.858989e4.chunk.js"
+    "revision": "016121a93752e88e7535",
+    "url": "/Canvas/static/js/main.eaa7308e.chunk.js"
   },
   {
-    "revision": "44f2cb768ddca1387ce7",
-    "url": "/Canvas/static/js/runtime-main.d15e341b.js"
+    "revision": "7b99a55224bc4a57640e",
+    "url": "/Canvas/static/js/runtime-main.919b706f.js"
   },
   {
     "revision": "4b6bdd1d3a65341fd06d8cdcc1578cf1",
