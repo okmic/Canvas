@@ -9,9 +9,12 @@ import { GiBasket } from "react-icons/gi";
 const PaintingDate = (props) => {
 
     const [modal, setModal] = useState(false)
+    const [buttonBasket, setButtonBasket] = useState(true)
+
     const addingPaitingInBasket = (imgName) => {
         return(
-            props.sendBasket(imgName)
+            props.sendBasket(imgName),
+            setButtonBasket(false)
         )
     }
     return (
@@ -20,7 +23,9 @@ const PaintingDate = (props) => {
                 <div   className="painting">
                     <LazyLoadImage onClick={() => setModal(true)} src={props.imgName} alt={props.imgName} effect="blur" />
                     <div className="basket__gallary">
-                        <button onClick={()=> addingPaitingInBasket(props.imgName)}>Добавить в <GiBasket size={19} /></button>
+                        <button onClick={()=> addingPaitingInBasket(props.imgName)}> 
+                        {buttonBasket ? <b> Добавить в <GiBasket size={19}  /> </b> : "Уже там" }
+                        </button>
                                 </div>
                 </div>
                 <div className="description">
