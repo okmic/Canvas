@@ -30,8 +30,7 @@
     justify-content: center;
     align-items: flex-start;
     flex-basis: 35%; 
-    overflow: hidden;
-
+    overflow: auto;
 }
 
 

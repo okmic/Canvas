@@ -3,13 +3,13 @@ import './App.css'
 import store from './redux/store'
 import Navbar from './components/navBar/Navbar'
 import Home from './components/Home/Home'
-import Footer from './components/Footer/Footer'
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import Contact from './components/contact/Contact'
 import ScrollToTop from './ScrollToTop'
 import { connect, Provider } from 'react-redux'
 import PreloaderContainer from './components/common/Preloader/PreloaderContainer'
 import BasketContainer from './components/basket/BasketContainer'
+import FooterContainer from './components/Footer/FooterContainer'
 
 const PaintingsContainer = lazy(() => import('./components/canvas/CanvasContainer'))
 
@@ -40,7 +40,7 @@ function App(props) {
           </div>
         </div>   
         <div className="conteinerContent">
-        <Footer />
+        <FooterContainer />
         </div>
       </div> 
       </Suspense>   

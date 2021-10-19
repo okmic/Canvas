@@ -24,7 +24,6 @@ footer {
 }
 
 .links__icon{
-
     text-align: center;
     width: 100%;
     height: 30px;
@@ -37,13 +36,29 @@ footer {
     height: 15px;
     font-size: 10px;
 }
+.links__sup{
+    font-size:13px;
+    position: absolute;
+    border-radius: 50%;
+    color: red;
+    opacity: 0;
+    transition: 1s; 
+    animation: supFooter 1s 1 forwards; 
+}
+.links__sup.active{
+    opacity: 1;
+}
 a.activeLink .links__container {
     color: #89b3e4;
 }
-.links__container:hover { background-color: rgba(0, 0, 0, 0.5);  transition: 1s;}
+.links__container:hover {color: #89b3e4; transition: 1s;}
 footer img {max-width: 50px; max-height: 50px;}
 footer img:hover{opacity: 0.8;}
-
+@keyframes supFooter{
+    0%{background-color: red; padding: 5px;}
+    90%{border-color: none;}
+    100%{opacity: 1; padding: 0;}
+}
 @media screen and (max-width: 750px) {
     footer {
         position: fixed;

@@ -6,7 +6,7 @@ let Basket = (props) => {
 
     return(
         props.paintings.length < 1
-        ? <div>blablabla</div> 
+        ? <div>В вашей карзине ничего нет...</div> 
         : <div className={s.basket__container}>
             {props.paintings.map( p => 
             <img key={p.imgName}

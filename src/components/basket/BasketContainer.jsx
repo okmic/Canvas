@@ -8,6 +8,7 @@ let BasketContainer = (props) => {
     const [loading, setLoading] = useState(undefined)
     const [completed, setCompleted] = useState(undefined)
 
+
     useEffect(() => {
     setTimeout(
         () => {

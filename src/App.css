@@ -40,14 +40,15 @@
   align-items: center;
 }
 
-button {
+.button {
   background-color: rgba(13, 13, 13, 0.445);
   color: #fff;
+  border: 1px solid #fff;
   border-radius: 15px;
-  padding: 5px;
+  padding: 7px;
   cursor: pointer;
 }
-button:hover {
+.button:hover {
   background-color: rgb(0, 0, 0);
   transition: 1s;
 }

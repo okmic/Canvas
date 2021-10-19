@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './footer.module.css';
 import { NavLink } from 'react-router-dom';
 import { BiHome } from "react-icons/bi";
@@ -7,6 +7,16 @@ import { MdCall } from "react-icons/md";
 import { GiBasket } from "react-icons/gi";
 
 const Footer = (props) => {
+
+    const [activeBasket, setActiveBasket] = useState(false)
+
+    useEffect(() => {
+        if(props.namber > 0) {
+            setActiveBasket(true)
+        }
+    }, [props.namber])
+
+
     return (
         <footer className={styles.header}>
         <NavLink to="/Home" activeClassName={styles.activeLink}>
@@ -44,7 +54,11 @@ const Footer = (props) => {
         <NavLink to="/Basket" activeClassName={styles.activeLink}>
             <div className={styles.links__container}>
             <div className={styles.links__icon}>
-            <GiBasket />
+            <GiBasket /> 
+            {activeBasket && 
+            <sup className={!activeBasket ? styles.links__sup : styles.links__sup + " " + styles.active}>
+                {"+" + props.namber}
+            </sup>} 
             </div>
             <div className={styles.links__description}>
                 <span>Корзина</span>

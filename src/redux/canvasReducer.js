@@ -1,42 +1,44 @@
-const SEND_BASKET = 'SEND_BASKET';
+const SEND_BASKET = 'SEND_BASKET'
+const COMPUTE_ARRAY = 'COMPUTE_ARRAY'
 
 let initialState = { 
     basket: [],
-    dialogs: [
-        {id: 1, name: 'Dimych'},
-        {id: 2, name: 'Andrew'},
-        {id: 3, name: 'Sveta'},
-        {id: 4, name: 'Sasha'},
-        {id: 5, name: 'Viktor'},
-        {id: 6, name: 'Valera'}
-    ],
-    messages: [
-        {id: 1, message: 'Hi'},
-        {id: 2, message: 'How is your it-kamasutra?'},
-        {id: 3, message: 'Yo'},
-        {id: 4, message: 'Yo'},
-        {id: 5, message: 'Yo'}
-    ]
+    computeForBasket: 0
  }
 
 const canvasReduser = (state = initialState, action) => {
     switch (action.type) {
         case SEND_BASKET:
+
             let body = action.body;
-            console.log("added body")
+            let i = state.basket.length + 1;
+
+            console.log(i)
             return {
                 ...state,
-                basket: [...state.basket, {imgName: body}]
+                basket: [...state.basket, {imgName: body}],
+                computeForBasket: i++,
             };
+            case COMPUTE_ARRAY:
+                debugger
+                let array = action.array
+                console.log(array)
+               return{ 
+                   ...state,
+                   computeForBasket: [...state.computeForBasket, array]
+            }
+
         default:
             return state;
     }
 }
 
-export const sendBasket = (body) => ({type: SEND_BASKET, body})
+export const sendBasket = (body, i) => ({ type: SEND_BASKET, body, i})
+export const computeArray = (array) => ({type: COMPUTE_ARRAY, array})
 
 export const initializeApp = (body) => (dispatch) => {
             dispatch(sendBasket(body));
+            console.log(body)
 }
 
 

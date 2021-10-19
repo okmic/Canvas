@@ -20,12 +20,11 @@ const PaintingsContainer = (props) => {
 }, [loading])
     return (
         !completed ? <PreloaderContainer />
-        : <Paintings sendBasket={props.sendBasket} />
+        :<Paintings sendBasket={props.sendBasket} />
     )
 }
 
 const mapStateToProps = (state) => {
-
     return{
     srsa: state.canvasReduser
 }}
