@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0dd57635064994b313199728af9a54e2",
+    "revision": "d12a100ed0c19d483f668d0cd6565984",
     "url": "/Canvas/index.html"
   },
   {
-    "revision": "a13f783a951a081bde8a",
-    "url": "/Canvas/static/css/3.753be54b.chunk.css"
+    "revision": "ab246c4ebab9804b768d",
+    "url": "/Canvas/static/css/3.aee06af2.chunk.css"
   },
   {
     "revision": "6b38f790057891147249",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Canvas/static/js/2.60e43755.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a13f783a951a081bde8a",
-    "url": "/Canvas/static/js/3.f19bd164.chunk.js"
+    "revision": "ab246c4ebab9804b768d",
+    "url": "/Canvas/static/js/3.5314f8a9.chunk.js"
   },
   {
     "revision": "5e4da4138fd25510942b",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Canvas/static/js/main.d8b5ae84.chunk.js"
   },
   {
-    "revision": "3444d3eb6bba8cdd3676",
-    "url": "/Canvas/static/js/runtime-main.c8658288.js"
+    "revision": "0307e819d2f8e405fb0f",
+    "url": "/Canvas/static/js/runtime-main.0f53f01e.js"
   },
   {
     "revision": "4b6bdd1d3a65341fd06d8cdcc1578cf1",
