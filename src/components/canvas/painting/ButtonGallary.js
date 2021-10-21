@@ -6,21 +6,29 @@ import { AiOutlineCheckCircle } from "react-icons/ai";
 
 const ButtonGallary = (props) => {
 
+    const addingPaitingInBasket = (id, imgName, paintingName, price) => {
+        return (
+        props.sendBasketTh(id, imgName, paintingName, price),
+        props.buttonBasketAC(id)
+        )
+    }
 
     return (
 
-        props.buttonBasket
+        props.buttonState
             ? <div className="basket__gallary">
-                <span className="button" onClick={() => props.buttonBasket && props.addingPaitingInBasket(props.imgName)}>
-                    <b> Добавить в <GiBasket size={19} /> </b>
-                </span>
-            </div>
+            <span className="button" onClick={() => props.buttonBasket && addingPaitingInBasket(props.id,  props.imgName, props.paintingName, props.price)}>
+                <b> Добавить в <GiBasket size={19} /> </b>
+            </span>
+            </div> 
 
             : <div className={!props.buttonBasket ? "basket__gallaryAnimate" : "basket__gallaryAnimate"  }>
-                <span className={props.classes__span} onClick={() => props.buttonBasket && props.addingPaitingInBasket(props.imgName)}>
-                    <b><AiOutlineCheckCircle color='green' /> </b>
-                </span>
-            </div>
+            <span className={props.classes__span} >
+                <b><AiOutlineCheckCircle color='green' /> </b>
+            </span>
+        </div>
+
+
     )
 }
 

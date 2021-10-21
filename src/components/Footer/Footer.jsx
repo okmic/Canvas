@@ -55,10 +55,12 @@ const Footer = (props) => {
             <div className={styles.links__container}>
             <div className={styles.links__icon}>
             <GiBasket /> 
-            {activeBasket && 
+            {activeBasket && props.namber > 0 ?
             <sup className={!activeBasket ? styles.links__sup : styles.links__sup + " " + styles.active}>
                 {"+" + props.namber}
-            </sup>} 
+            </sup>
+            : ""
+            } 
             </div>
             <div className={styles.links__description}>
                 <span>Корзина</span>

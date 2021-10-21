@@ -1,6 +1,40 @@
 .basket__container {
     height: 100%;
     width: 100%;
-    background-color: rgb(255, 255, 255);
     padding-bottom: 90px;
+    background-color: rgb(	150, 75, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.basket__item{
+    display: flex;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 15px;
+    box-shadow: 5px 5px 5px 5px rgba(43, 37, 37, 0.466);
+}
+
+.image{
+    cursor: pointer;
+    max-height: 70px;
+    max-width: 50px;
+    background-color: #55504b;
+    border: rgb(43, 37, 37) double 9px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+}
+
+.description span {
+    margin-top: 9px;
+    font-weight: 500;
+    color: rgb(36, 25, 14);
+}
+
+.description__name{
+    font-size: 25px;
 }

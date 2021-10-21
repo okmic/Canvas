@@ -4,13 +4,12 @@ import Footer from './Footer';
 
 
 const FooterContainer = (props) => {
-
     return <Footer {...props} />
 }
 
 const mapStateToProps = (state) => {
     return {
-        namber: state.canvasReduser.computeForBasket
+        namber: state.canvasReduser.basket.length
     }
 }
 

@@ -1,32 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { sendBasket } from '../../redux/canvasReducer';
+import { buttonBasketAC, sendBasketTh } from '../../redux/canvasReducer';
 import PreloaderContainer from '../common/Preloader/PreloaderContainer';
 import Paintings from './Canvas';
 
 const PaintingsContainer = (props) => {
     const [loading, setLoading] = useState(undefined)
     const [completed, setCompleted] = useState(undefined)
-
+    
+    
     useEffect(() => {
     setTimeout(
         () => {
             setLoading(true)
             setTimeout(
                 () => {
-                   setCompleted(true)
-                }, 1000)
+                   setCompleted(props.paintingData && true)
+                }, 1500)
         }, 1500)
-}, [loading])
+}, [loading, props.paintingData])
+
     return (
         !completed ? <PreloaderContainer />
-        :<Paintings sendBasket={props.sendBasket} />
+        :<Paintings sendBasketTh={props.sendBasketTh} buttonBasketAC={props.buttonBasketAC} paintingData={props.paintingData} />
     )
 }
 
 const mapStateToProps = (state) => {
     return{
-    srsa: state.canvasReduser
+        paintingData: state.canvasReduser.paintingData
 }}
 
-export default connect(mapStateToProps, {sendBasket})(PaintingsContainer)
+export default connect(mapStateToProps, {sendBasketTh, buttonBasketAC})(PaintingsContainer)
