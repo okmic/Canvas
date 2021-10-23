@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { buttonBasketACUp, removeItemTh } from "../../redux/canvasReducer";
+import { buttonBasketACUp, orderStatus, removeItemTh } from "../../redux/canvasReducer";
 
 
 import PreloaderContainer from "../common/Preloader/PreloaderContainer";
@@ -27,18 +27,24 @@ let BasketContainer = (props) => {
        props.removeItemTh(id)
            } 
 
+    const removeOrderStatus = () => {
+        return(
+            props.orderStatus()
+        )
+    }
+
     return (
          ! completed ? <PreloaderContainer />
-        :  <Basket totalPrice={props.totalPrice} paintings={props.paintings}  removeItem={removeItem} buttonBasketACUp={props.buttonBasketACUp} />
+        :  <Basket  totalPrice={props.totalPrice} paintings={props.paintings}  removeItem={removeItem} buttonBasketACUp={props.buttonBasketACUp} removeOrderStatus={removeOrderStatus} order={props.order} />
     )
 }
 
 const mapStateToProps = (state) => {
-debugger
     return {
         paintings: state.canvasReduser.basket,
-        totalPrice: state.canvasReduser.basket.reduce((total, item) => total + item.price, 0)
+        totalPrice: state.canvasReduser.basket.reduce((total, item) => total + item.price, 0),
+        order: state.canvasReduser.order,
     }
 }
 
-export default connect(mapStateToProps, {removeItemTh, buttonBasketACUp})(BasketContainer)
+export default connect(mapStateToProps, {removeItemTh, buttonBasketACUp, orderStatus})(BasketContainer)

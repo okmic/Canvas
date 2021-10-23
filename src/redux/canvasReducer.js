@@ -14,10 +14,13 @@ import e from '../components/img/canvas/13.jpg';
 import ee from '../components/img/canvas/14.jpg';
 import eee from '../components/img/canvas/15.jpg';
 
+
+
 const SEND_BASKET = 'SEND_BASKET'
 const REMOVE_ITEM = 'REMOVE_ITEM'
 const REMOVE_STATUS = 'REMOVE_STATUS'
 const REMOVE_STATUS_UP = 'REMOVE_STATUS_UP'
+const ORDER_STATUS = 'ORDER_STATUS'
 
 let initialState = {
     basket: [],
@@ -40,7 +43,8 @@ let initialState = {
         { id: 16, imgName: z, paintingName: "Побережье", price: 9000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
         { id: 17, imgName: zz, paintingName: "Цветы", price: 7000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
         { id: 18, imgName: zzz, paintingName: "Натюрморт", price: 8000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." }
-    ]
+    ],
+    order: false
 }
 
 const canvasReduser = (state = initialState, action) => {
@@ -69,6 +73,12 @@ console.log(action.price)
                 basket: state.basket.filter(o => o.id !== action.payload),
             }
         }
+        case ORDER_STATUS: {
+            return {
+                ...state,
+                order: !state.order
+            }
+        }
         default:
             return state;
     }
@@ -78,6 +88,7 @@ export const sendBasket = (id, imgName, paintingName, price) => ({ type: SEND_BA
 export const buttonBasketAC = (id) => ({ type: REMOVE_STATUS, id })
 export const buttonBasketACUp = (id) => ({ type: REMOVE_STATUS_UP, id })
 export const removeItem = (id) => ({ type: REMOVE_ITEM, payload: id })
+export const orderStatus = () => ({ type: ORDER_STATUS})
 
 export const sendBasketTh = (id, imgName, paintingName, price) => (dispatch) => {
     dispatch(sendBasket(id, imgName, paintingName, price));

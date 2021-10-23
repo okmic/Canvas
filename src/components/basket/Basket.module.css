@@ -1,21 +1,26 @@
 .basket__container {
-    height: 100%;
-    width: 100%;
     padding-bottom: 90px;
     background-color: rgb(	150, 75, 0);
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .basket__item{
     display: flex;
+    min-width: 350px;
+    max-width: 550px;
+    justify-content: space-between;
     background-color: #fff;
     padding: 15px;
     border-radius: 15px;
-    margin: 15px;
+    margin: 15px 30px;
     box-shadow: 5px 5px 5px 5px rgba(43, 37, 37, 0.466);
 }
-
+.item__box {
+    display: flex;
+}
 .image{
     cursor: pointer;
     max-height: 70px;
@@ -37,4 +42,72 @@
 
 .description__name{
     font-size: 25px;
+}
+
+.close {
+
+    font-size: 19px;
+
+}
+
+.basket__total{
+    width: 100%;
+    width: 90%;
+    padding: 30px;
+    margin: 0 15px;
+    color: #fff;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #bbbbbb ;
+    max-height: 50px;
+}
+.total__price {
+    -webkit-text-stroke: 1px rgb(255, 0, 0);
+}
+
+.length{
+    margin: -20px 0;
+}
+
+.basket_submit{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit__order, .submit__order_active{
+    cursor: pointer;
+    margin: 15px 5px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 17px;
+    background-color: #57c237;
+    color: white;
+    border: 1px #57c237 solid;
+    transform: scale(0.9);
+    transition: 1s;
+    animation: submitOrder 1.5s 1 forwards;
+}
+
+.submit__order_active {
+    background-color: tomato;
+    border: 1px tomato solid;
+    animation: submitOrderActive 1.5s 1 forwards;
+}
+
+.submit__order:hover{ transform: scale(1); transition: 1s;}
+.submit__order_active:hover{ transform: scale(1); transition: 1s;}
+
+@keyframes submitOrder {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes submitOrderActive {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
