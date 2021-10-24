@@ -6,13 +6,37 @@
     display: flex;
     flex-direction: column;
 }
+.basket_null_container{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.basket_null{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+.null_description{
+    animation: nullDescription 1s 1 forwards;
+}
+.button_translete{
+    animation: buttonNull 1s 1 forwards;
+}
+
+.button_null{
+    display: flex;
+    align-items: center;
+}
 
 .basket__item{
     display: flex;
     min-width: 350px;
     max-width: 550px;
     justify-content: space-between;
-    background-color: #fff;
+    background: linear-gradient(45deg, #EECFBA, #C5DDE8);
     padding: 15px;
     border-radius: 15px;
     margin: 15px 30px;
@@ -23,10 +47,12 @@
 }
 .image{
     cursor: pointer;
-    max-height: 70px;
-    max-width: 50px;
-    background-color: #55504b;
-    border: rgb(43, 37, 37) double 9px;
+    max-width: 100px;
+    max-height: 50px;
+    background-color: #ffc7dd;
+    border: #8f827c double 9px;
+    display: flex;
+    align-items: center;
 }
 
 .description{
@@ -73,7 +99,6 @@
 
 .basket_submit{
     width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,6 +127,16 @@
 
 .submit__order:hover{ transform: scale(1); transition: 1s;}
 .submit__order_active:hover{ transform: scale(1); transition: 1s;}
+
+@keyframes nullDescription {
+   0%{transform: translateY(-30vh); opacity: 0.3;}
+   100%{transform: translateY(0); opacity: 1;} 
+}
+
+@keyframes buttonNull {
+    0%{transform: translateY(30vh); opacity: 0.3;}
+    100%{transform: translateY(0); opacity: 1;} 
+ }
 
 @keyframes submitOrder {
     0%{opacity: 0;}

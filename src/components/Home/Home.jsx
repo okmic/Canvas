@@ -7,7 +7,7 @@ import Contact from '../contact/Contact';
 import PreloaderContainer from '../common/Preloader/PreloaderContainer';
 
 
-const Home = (props) => {
+const Home = React.memo(props => {
 
     const [loading, setLoading] = useState(undefined)
     const [completed, setCompleted] = useState(undefined)
@@ -19,8 +19,8 @@ const Home = (props) => {
             setTimeout(
                 () => {
                    setCompleted(true)
-                }, 1000)
-        }, 1500)
+                }, 500)
+        }, 500)
 }, [loading])
 
     return (
@@ -44,6 +44,6 @@ const Home = (props) => {
             <Contact />
         </div>
         )
-}
+})
 
 export default Home

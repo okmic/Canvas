@@ -1,5 +1,6 @@
 body {
-  max-width: 2500px;
+  max-width: 100vw;
+  height: 100%;
   background-color: rgb(	150, 75, 0);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

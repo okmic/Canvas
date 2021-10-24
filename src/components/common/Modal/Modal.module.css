@@ -20,8 +20,8 @@
 }
 
 .modal__content {
-    border: 15px double #fff ;
-    background-color:rgba(41, 30, 30, 0.822);
+    background-color: #ffc7dd;
+    border: #8f827c double 25px;
     max-width: 95%;
     max-height: 95%;
     transform: scale(0);

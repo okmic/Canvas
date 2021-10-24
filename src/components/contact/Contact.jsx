@@ -4,7 +4,7 @@ import logok from '../img/logok.jpg'
 import PreloaderContainer from '../common/Preloader/PreloaderContainer';
 
 
-const Contact = (props) => {
+const Contact = React.memo(props => {
     const [loading, setLoading] = useState(undefined)
     const [completed, setCompleted] = useState(undefined)
 
@@ -15,8 +15,8 @@ const Contact = (props) => {
             setTimeout(
                 () => {
                    setCompleted(true)
-                }, 500)
-        }, 1500)
+                }, 200)
+        }, 500)
 }, [loading])
 
     return (
@@ -38,6 +38,6 @@ const Contact = (props) => {
         </div>
         </div>
                 )
-}
+})
 
 export default Contact

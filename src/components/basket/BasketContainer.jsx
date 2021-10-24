@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { buttonBasketACUp, orderStatus, removeItemTh } from "../../redux/canvasReducer";
+import ScrollToTop from "../../ScrollToTop";
 
 
 import PreloaderContainer from "../common/Preloader/PreloaderContainer";
 import Basket from "./Basket";
 
 
-let BasketContainer = (props) => {
+let BasketContainer = React.memo(props => {
     const [loading, setLoading] = useState(undefined)
     const [completed, setCompleted] = useState(undefined)
     
@@ -18,10 +19,9 @@ let BasketContainer = (props) => {
                 setTimeout(
                     () => {
                        setCompleted(true)
-                    }, 1000)
-            }, 1500)
+                    }, 200)
+            }, 500)
     }, [loading])
-
 
     const removeItem = (id) => {
        props.removeItemTh(id)
@@ -29,15 +29,16 @@ let BasketContainer = (props) => {
 
     const removeOrderStatus = () => {
         return(
-            props.orderStatus()
+            props.orderStatus(),
+            <ScrollToTop />
         )
     }
 
     return (
-         ! completed ? <PreloaderContainer />
-        :  <Basket  totalPrice={props.totalPrice} paintings={props.paintings}  removeItem={removeItem} buttonBasketACUp={props.buttonBasketACUp} removeOrderStatus={removeOrderStatus} order={props.order} />
+        ! completed ? <PreloaderContainer />
+        : <Basket  totalPrice={props.totalPrice} paintings={props.paintings}  removeItem={removeItem} buttonBasketACUp={props.buttonBasketACUp} removeOrderStatus={removeOrderStatus} order={props.order} />
     )
-}
+})
 
 const mapStateToProps = (state) => {
     return {

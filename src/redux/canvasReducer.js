@@ -50,7 +50,6 @@ let initialState = {
 const canvasReduser = (state = initialState, action) => {
     switch (action.type) {
         case SEND_BASKET: {
-console.log(action.price)
             return {
                 ...state,
                 basket: [...state.basket, {

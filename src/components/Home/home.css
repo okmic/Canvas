@@ -1,5 +1,5 @@
 .container__home{
-    width: 100vw;
+    max-width: 100%;
 }
 .conteinerHome {
     max-width: 1180px;
