@@ -1,0 +1,58 @@
+.genresBox {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gernes_item{
+    position: relative;
+    min-width: 300px;
+    min-height: 150px;
+    background-color: black;
+    border: blanchedalmond 1px solid;
+    margin: 15px;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: 0.5s;
+    text-align: rigth;
+
+}
+.genres__link{
+    position: absolute;
+    font-size: 30px;
+    z-index: 2;
+    -webkit-text-stroke: 1px rgb(27, 25, 25);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.landscapes, .mountain, .seascapes, .stillLife, .positive {
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.5;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.308) ;
+}
+.landscapes {
+    background-image: url(../../../img/canvas/img_1.jpeg);
+}
+.mountain{
+    background-image: url(../../../img/canvas/img_9.jpg);
+}
+.seascapes{
+    background-image: url(../../../img/canvas/img_4.jpg);
+}
+.stillLife{
+    background-image: url(../../../img/canvas/img_3.jpg);
+}
+.positive{
+    background-image: url(../../../img/canvas/img_12.jpg);
+}
+.gernes_item:hover{
+    transform: scale(1);
+    transition: 1s;
+    border-color: tomato;
+}

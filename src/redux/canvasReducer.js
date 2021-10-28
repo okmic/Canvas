@@ -1,20 +1,4 @@
-import vlesu from '../components/img/canvas/1.jpg'
-import cveti from '../components/img/canvas/2.jpg';
-import z from '../components/img/canvas/3.jpg';
-import zz from '../components/img/canvas/4.jpg';
-import zzz from '../components/img/canvas/5.jpg';
-import zzzz from '../components/img/canvas/6.jpg';
-import q from '../components/img/canvas/7.jpg';
-import qq from '../components/img/canvas/8.jpg';
-import qqq from '../components/img/canvas/9.jpg';
-import w from '../components/img/canvas/10.jpg';
-import ww from '../components/img/canvas/11.jpg';
-import www from '../components/img/canvas/12.jpg';
-import e from '../components/img/canvas/13.jpg';
-import ee from '../components/img/canvas/14.jpg';
-import eee from '../components/img/canvas/15.jpg';
-
-
+import initialState from "./canvasData"
 
 const SEND_BASKET = 'SEND_BASKET'
 const REMOVE_ITEM = 'REMOVE_ITEM'
@@ -22,30 +6,11 @@ const REMOVE_STATUS = 'REMOVE_STATUS'
 const REMOVE_STATUS_UP = 'REMOVE_STATUS_UP'
 const ORDER_STATUS = 'ORDER_STATUS'
 
-let initialState = {
-    basket: [],
-    paintingData: [
-        { id: 1, imgName: vlesu, paintingName: "В лесу", price: 8000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 2, imgName: cveti, paintingName: "Подсолнухи", price: 7000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 3, imgName: z, paintingName: "Цветы", price: 7000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 4, imgName: zz, paintingName: "Побережье", price: 9000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 5, imgName: zzz, paintingName: "Натюрморт", price: 5000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 6, imgName: zzzz, paintingName: "Цветы", price: 7000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 7, imgName: q, paintingName: "Дубы Петра Великого", price: 30000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 8, imgName: qq, paintingName: "Омега", price: 7000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 9, imgName: qqq, paintingName: "Горный пейзаж", price: 9000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 10, imgName: w, paintingName: "К свету", price: 7000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 11, imgName: ww, paintingName: "Маки", price: 8000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 12, imgName: www, paintingName: "Рыжие коты", price: 5000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 13, imgName: e, paintingName: "Побережье", price: 9000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 14, imgName: ee, paintingName: "Рыжий кот", price: 5000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 15, imgName: eee, paintingName: "Романтическая компазиция", price: 11000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 16, imgName: z, paintingName: "Побережье", price: 9000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 17, imgName: zz, paintingName: "Цветы", price: 7000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." },
-        { id: 18, imgName: zzz, paintingName: "Натюрморт", price: 8000, buttonState: true, description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ullam accusamus nobis possimus? Explicabo, ex quis unde sint atque quam animi distinctio officiis, laborum vero et iste cupiditate perferendis! Obcaecati." }
-    ],
-    order: false
-}
+const LANDSCAPES_STATUS = "LANDSCAPES_STATUS"
+const MOUNTAIN_STATUS = "MOUNTAIN_STATUS"
+const SEASCAPES_STATUS = "SEASCAPES_STATUS"
+const STILLLIFE_STATUS = "STILLLIFE_STATUS"
+const POSITIVE_STATUS = "POSITIVE_STATUS"
 
 const canvasReduser = (state = initialState, action) => {
     switch (action.type) {
@@ -61,7 +26,6 @@ const canvasReduser = (state = initialState, action) => {
             }
         }
         case REMOVE_STATUS: {
-            return { ...state, paintingData: state.paintingData.map(p => p.id === action.id ? { ...p, buttonState: !p.buttonState } : p) }
         }
         case REMOVE_STATUS_UP: {
             return { ...state, paintingData: state.paintingData.map(p => p.id === action.id ? { ...p, buttonState: !p.buttonState } : p) }
@@ -78,6 +42,21 @@ const canvasReduser = (state = initialState, action) => {
                 order: !state.order
             }
         }
+        case LANDSCAPES_STATUS:{
+           return {...state, landscapes: state.landscapes.map(p => p.id === action.id ? { ...p, buttonState: !p.buttonState } : p)}
+        }
+        case MOUNTAIN_STATUS:{
+            return {...state, mountainLandscapes: state.mountainLandscapes.map(p => p.id === action.id ? { ...p, buttonState: !p.buttonState } : p)}
+        }
+        case SEASCAPES_STATUS:{
+            return {...state, seascapes: state.seascapes.map(p => p.id === action.id ? { ...p, buttonState: !p.buttonState } : p)}
+        }
+        case STILLLIFE_STATUS:{
+            return {...state, stillLife: state.stillLife.map(p => p.id === action.id ? { ...p, buttonState: !p.buttonState } : p)}
+        }
+        case POSITIVE_STATUS:{
+            return {...state, positive: state.positive.map(p => p.id === action.id ? { ...p, buttonState: !p.buttonState } : p)}
+        }
         default:
             return state;
     }
@@ -89,6 +68,15 @@ export const buttonBasketACUp = (id) => ({ type: REMOVE_STATUS_UP, id })
 export const removeItem = (id) => ({ type: REMOVE_ITEM, payload: id })
 export const orderStatus = () => ({ type: ORDER_STATUS})
 
+export const landscapesStatus = (id) => ({ type: LANDSCAPES_STATUS, id})
+export const mountainStatus = (id) => ({ type: MOUNTAIN_STATUS, id})
+export const seascapesStatus = (id) => ({ type: SEASCAPES_STATUS, id})
+export const stillLifeStatus = (id) => ({ type: STILLLIFE_STATUS, id})
+export const positiveStatus = (id) => ({ type: POSITIVE_STATUS, id})
+
+
+
+
 export const sendBasketTh = (id, imgName, paintingName, price) => (dispatch) => {
     dispatch(sendBasket(id, imgName, paintingName, price));
 }
@@ -96,5 +84,7 @@ export const removeItemTh = (id) => (dispatch) => {
     dispatch(removeItem(id));
 
 }
+
+
 
 export default canvasReduser

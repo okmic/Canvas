@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { buttonBasketACUp, orderStatus, removeItemTh } from "../../redux/canvasReducer";
+import { landscapesStatus, mountainStatus, positiveStatus, seascapesStatus, stillLifeStatus } from "../../redux/canvasReducer";
+import { orderStatus, removeItemTh } from "../../redux/canvasReducerCopy";
 import ScrollToTop from "../../ScrollToTop";
 
 
@@ -36,7 +37,16 @@ let BasketContainer = React.memo(props => {
 
     return (
         ! completed ? <PreloaderContainer />
-        : <Basket  totalPrice={props.totalPrice} paintings={props.paintings}  removeItem={removeItem} buttonBasketACUp={props.buttonBasketACUp} removeOrderStatus={removeOrderStatus} order={props.order} />
+        : <Basket  
+        totalPrice={props.totalPrice} 
+        paintings={props.paintings}  
+        removeItem={removeItem} 
+        buttonBasketACUp={props.buttonBasketACUp} 
+        removeOrderStatus={removeOrderStatus} 
+        order={props.order} 
+        landscapesStatus={props.landscapesStatus}
+        {...props}
+        />
     )
 })
 
@@ -48,4 +58,6 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {removeItemTh, buttonBasketACUp, orderStatus})(BasketContainer)
+export default connect(mapStateToProps, {
+    removeItemTh, orderStatus, landscapesStatus, mountainStatus, seascapesStatus, stillLifeStatus, positiveStatus}
+    )(BasketContainer)

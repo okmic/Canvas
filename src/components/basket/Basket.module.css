@@ -20,10 +20,10 @@
     color: #fff;
 }
 .null_description{
-    animation: nullDescription 1s 1 forwards;
+    animation: nullDescription 0.7s 1 forwards;
 }
 .button_translete{
-    animation: buttonNull 1s 1 forwards;
+    animation: buttonNull 0.7s 1 forwards;
 }
 
 .button_null{

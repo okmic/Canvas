@@ -1,0 +1,20 @@
+import React from "react";
+import { connect } from "react-redux";
+import { sendBasketTh } from "../../../../../../redux/canvasReducerCopy";
+import { landscapesStatus } from "../../../../../../redux/canvasReducer";
+import Landscapes from "./Landscapes";
+
+const LandscapesContainer = (props) => {
+
+    return(
+        <Landscapes {...props} />
+    )
+}
+
+const mapStateToProps = (state) => {
+    return{
+        landscapes: state.canvasReduser.landscapes
+    }
+}
+
+export default connect(mapStateToProps, {sendBasketTh, landscapesStatus})(LandscapesContainer)

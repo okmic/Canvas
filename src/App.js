@@ -10,8 +10,13 @@ import { connect, Provider } from 'react-redux'
 import PreloaderContainer from './components/common/Preloader/PreloaderContainer'
 import BasketContainer from './components/basket/BasketContainer'
 import FooterContainer from './components/Footer/FooterContainer'
+import PaintingsContainer from './components/canvas/CanvasContainer'
 
-const PaintingsContainer = lazy(() => import('./components/canvas/CanvasContainer'))
+const LandscapesContainer = lazy(() => import('./components/canvas/painting/genres/classic/landscapes/LandscapesContainer'))
+const MountainContainer = lazy(() => import('./components/canvas/painting/genres/classic/mountainLandscapes/MountainContainer'))
+const SeascapesContainer = lazy(() => import('./components/canvas/painting/genres/classic/seascapes/SeascapesContainer'))
+const StillLifeContainer = lazy(() => import('./components/canvas/painting/genres/stillLife/StillLifeContainer'))
+const PositiveContainer = lazy(() => import('./components/canvas/painting/genres/positive/PositiveContainer'))
 
 
 /* import Lesson from './components/modal/Modal'; */
@@ -19,7 +24,6 @@ const PaintingsContainer = lazy(() => import('./components/canvas/CanvasContaine
 
 
 function App(props) {
-
   return (
         <Suspense fallback={PreloaderContainer}>
         <div className="container__app">
@@ -32,9 +36,13 @@ function App(props) {
 
             <Route path='/Gallery' 
             render={() => <PaintingsContainer />} />
-
             <Route path='/Basket' render={() => <BasketContainer />} />
             <Route path='/Contacts' render={() => <Contact />} />
+            <Route  path='/Gallary/Still-life'  render={() =>  <StillLifeContainer />} />
+            <Route  path='/Gallary/Mountain-landscapes'  render={() => <MountainContainer />} />
+            <Route  path='/Gallary/Landscapes'  render={() => <LandscapesContainer />} />
+            <Route  path='/Gallary/Seascapes'  render={() => <SeascapesContainer />} />
+            <Route  path='/Gallary/Positive'  render={() => <PositiveContainer />} />  
             <Redirect from="/" to="/Home" />
             </Switch>
           </div>

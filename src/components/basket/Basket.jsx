@@ -13,10 +13,23 @@ let Basket = (props) => {
     const [modal, setModal] = useState(false)
 
     let onChangeStatus = (id) => {
-        return (
-            props.removeItem(id),
-            props.buttonBasketACUp(id)
-        )
+            if (id > 100 & id < 200) {
+                props.landscapesStatus(id)
+            }   
+            else if(id > 200 & id < 300) {
+                props.mountainStatus(id)
+            }   
+            else if(id > 300 & id < 400) {
+                props.seascapesStatus(id)
+            }   
+            else if(id > 400 & id < 500) {
+                props.stillLifeStatus(id)
+            }  
+            else if(id > 500) {
+                props.positiveStatus(id)
+            }
+        return props.removeItem(id)
+
     }
     return (
         <div className={s.basket__container}>

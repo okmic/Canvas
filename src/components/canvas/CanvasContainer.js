@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { connect } from 'react-redux';
-import { buttonBasketAC, sendBasketTh } from '../../redux/canvasReducer';
+
 import PreloaderContainer from '../common/Preloader/PreloaderContainer';
 import Paintings from './Canvas';
 
@@ -15,20 +14,16 @@ const PaintingsContainer = React.memo(props => {
             setLoading(true)
             setTimeout(
                 () => {
-                   setCompleted(props.paintingData)
-                }, 500)
-        }, 1500)
+                   setCompleted(true)
+                }, 300)
+        }, 200)
 }, [loading, props.paintingData])
 
     return (
         ! completed ? <PreloaderContainer />
-        : <Paintings sendBasketTh={props.sendBasketTh} buttonBasketAC={props.buttonBasketAC} paintingData={props.paintingData} />
+        : <Paintings />
     )
 })
 
-const mapStateToProps = (state) => {
-    return{
-        paintingData: state.canvasReduser.paintingData
-}}
 
-export default connect(mapStateToProps, {sendBasketTh, buttonBasketAC})(PaintingsContainer)
+export default PaintingsContainer
