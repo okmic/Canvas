@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { sendBasketTh } from "../../../../../../redux/canvasReducerCopy";
-import { landscapesStatus } from "../../../../../../redux/canvasReducer";
+import {sendBasketTh, landscapesStatus } from "../../../../../../redux/canvasReducer";
 import Landscapes from "./Landscapes";
 import PreloaderContainer from "../../../../../common/Preloader/PreloaderContainer";
 

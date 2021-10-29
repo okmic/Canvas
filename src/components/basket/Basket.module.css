@@ -1,10 +1,11 @@
 .basket__container {
     padding-bottom: 90px;
     background-color: rgb(	150, 75, 0);
-    width: 100%;
+    width: 100vw;
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 .basket_null_container{
     height: 70vh;
@@ -33,7 +34,7 @@
 
 .basket__item{
     display: flex;
-    min-width: 350px;
+    min-width: 300px;
     max-width: 550px;
     justify-content: space-between;
     background: linear-gradient(45deg, #EECFBA, #C5DDE8);
@@ -42,6 +43,7 @@
     margin: 15px 30px;
     box-shadow: 5px 5px 5px 5px rgba(43, 37, 37, 0.466);
 }
+
 .item__box {
     display: flex;
 }
@@ -61,24 +63,19 @@
 }
 
 .description span {
-    margin-top: 9px;
     font-weight: 500;
     color: rgb(36, 25, 14);
 }
-
 .description__name{
     font-size: 25px;
 }
 
 .close {
-
     font-size: 19px;
-
 }
 
 .basket__total{
-    width: 100%;
-    width: 90%;
+    max-width: 95%;
     padding: 30px;
     margin: 0 15px;
     color: #fff;
@@ -145,4 +142,16 @@
 @keyframes submitOrderActive {
     0%{opacity: 0;}
     100%{opacity: 1;}
+}
+
+@media screen and (max-width: 750px) {
+    .basket__item{
+        margin: 15px 5px;
+    }
+    .basket__total{
+        margin: 0 5px;
+    }
+    .description__name{
+        font-size: 19px;
+    }
 }

@@ -58,7 +58,6 @@ function App(props) {
 }
 
 const mapStateToProps = (state) => ({
-  initialized: state.appReducer,
   messages: state.canvasReduser
 
 })

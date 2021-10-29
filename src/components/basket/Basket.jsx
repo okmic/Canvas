@@ -11,7 +11,7 @@ import Modal from "../common/Modal/Modal";
 let Basket = (props) => {
 
     const [modal, setModal] = useState(false)
-    debugger
+    
     let onChangeStatus = (id) => {
             if (id > 100 & id < 200) {
                 props.landscapesStatus(id)
