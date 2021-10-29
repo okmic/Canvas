@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import HookExample from "../../../../ScrollToTop/ScrollToTopAnimate";
-import ScrollToTopAnimate from "../../../../ScrollToTop/ScrollToTopAnimate";
 import Modal from "../../../common/Modal/Modal";
 import Accordion from "./Accordion/Accordion";
 import ButtonGallary from "./ButtonGallary";
@@ -29,7 +27,6 @@ const CanvasData = (props) => {
                     <img src={props.imgName} alt={props.imgName} />
                 </Modal>
             </div>
-            <HookExample />
         </div>
     )
 }

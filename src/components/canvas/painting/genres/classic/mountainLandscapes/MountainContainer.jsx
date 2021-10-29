@@ -6,18 +6,24 @@ import PreloaderContainer from "../../../../../common/Preloader/PreloaderContain
 
 const MountainContainer = (props) => {
 
+    const [loading, setLoading] = useState(undefined)
     const [completed, setCompleted] = useState(undefined)
-
-    useEffect(() => {
-        setTimeout(
-            () => {
-                       setCompleted(props.mountainLandscapes)
-                    }, 700)
-    }, [props.landscapes])
     
-        return (
-            ! completed ? <PreloaderContainer />
-            : <MountainLandscapes {...props} />
+    
+    useEffect(() => {
+    setTimeout(
+        () => {
+            setLoading(true)
+            setTimeout(
+                () => {
+                   setCompleted(props.mountainLandscapes)
+                }, 200)
+        }, 300)
+}, [loading, props.mountainLandscapes])
+
+    return (
+        ! completed ? <PreloaderContainer />
+        : <MountainLandscapes {...props} />
     )
 }
 

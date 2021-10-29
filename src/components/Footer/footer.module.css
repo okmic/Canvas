@@ -43,10 +43,12 @@ footer {
     color: red;
     opacity: 0;
     transition: 1s; 
+    border-bottom: 1px solid #000;
     animation: supFooter 1s 1 forwards; 
 }
 .links__sup.active{
     opacity: 1;
+    border: none;
 }
 a.activeLink .links__container {
     color: #89b3e4;

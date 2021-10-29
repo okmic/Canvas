@@ -22,15 +22,18 @@
 .modal__content {
     background-color: #8a5d35;
     border: #31190e double 25px;
+    margin-top: -3vh;
     max-width: 95%;
     max-height: 95%;
     transform: scale(0);
     transition: 0.4s all;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-basis: 35%; 
     overflow: auto;
+    z-index: 100;
+}
+.modal__content img{
+    max-width: 87vw;
+    max-height: 75vh;
+    z-index: 100;
 }
 
 
@@ -54,8 +57,3 @@
     transition: 1s;
 }
 
-@media screen and (max-width: 750px) {
-    .modal__content { 
-        flex-basis: 95%; 
-    }
-}

@@ -7,18 +7,24 @@ import PreloaderContainer from "../../../../../common/Preloader/PreloaderContain
 
 const SeascapesContainer = (props) => {
   
+    const [loading, setLoading] = useState(undefined)
     const [completed, setCompleted] = useState(undefined)
-
-    useEffect(() => {
-        setTimeout(
-            () => {
-                       setCompleted(props.seascapes)
-                    }, 700)
-    }, [props.landscapes])
     
-        return (
-            ! completed ? <PreloaderContainer />
-            : <Seascapes {...props} />
+    
+    useEffect(() => {
+    setTimeout(
+        () => {
+            setLoading(true)
+            setTimeout(
+                () => {
+                   setCompleted(props.seascapes)
+                }, 200)
+        }, 300)
+}, [loading, props.seascapes])
+
+    return (
+        ! completed ? <PreloaderContainer />
+        : <Seascapes {...props} />
     )
 }
 

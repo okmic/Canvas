@@ -5,18 +5,25 @@ import PreloaderContainer from "../../../../common/Preloader/PreloaderContainer"
 import StillLife from "./StillLife";
 
 const StillLifeContainer = (props) => {
-    const [completed, setCompleted] = useState(undefined)
 
-    useEffect(() => {
-        setTimeout(
-            () => {
-                       setCompleted(props.stillLife)
-                    }, 700)
-    }, [props.landscapes])
+    const [loading, setLoading] = useState(undefined)
+    const [completed, setCompleted] = useState(undefined)
     
-        return (
-            ! completed ? <PreloaderContainer />
-            : <StillLife {...props} />
+    
+    useEffect(() => {
+    setTimeout(
+        () => {
+            setLoading(true)
+            setTimeout(
+                () => {
+                   setCompleted(props.stillLife)
+                }, 200)
+        }, 300)
+}, [loading, props.stillLife])
+
+    return (
+        ! completed ? <PreloaderContainer />
+        : <StillLife {...props} />
         )
 }
 

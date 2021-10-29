@@ -11,6 +11,7 @@ import PreloaderContainer from './components/common/Preloader/PreloaderContainer
 import BasketContainer from './components/basket/BasketContainer'
 import FooterContainer from './components/Footer/FooterContainer'
 import PaintingsContainer from './components/canvas/CanvasContainer'
+import ScrollToTopAnimate from './ScrollToTop/ScrollToTopAnimate'
 
 const LandscapesContainer = lazy(() => import('./components/canvas/painting/genres/classic/landscapes/LandscapesContainer'))
 const MountainContainer = lazy(() => import('./components/canvas/painting/genres/classic/mountainLandscapes/MountainContainer'))
@@ -50,6 +51,7 @@ function App(props) {
         <div className="conteinerContent">
         <FooterContainer />
         </div>
+        <ScrollToTopAnimate />
       </div> 
       </Suspense>   
   );

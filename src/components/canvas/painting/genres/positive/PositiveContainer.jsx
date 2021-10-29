@@ -5,18 +5,25 @@ import PreloaderContainer from "../../../../common/Preloader/PreloaderContainer"
 import Positive from "./Positive";
 
 const PositiveContainer = (props) => {
-    const [completed, setCompleted] = useState(undefined)
 
-    useEffect(() => {
-        setTimeout(
-            () => {
-                       setCompleted(props.positive)
-                    }, 700)
-    }, [props.landscapes])
+    const [loading, setLoading] = useState(undefined)
+    const [completed, setCompleted] = useState(undefined)
     
-        return (
-            ! completed ? <PreloaderContainer />
-            : <Positive {...props} />
+    
+    useEffect(() => {
+    setTimeout(
+        () => {
+            setLoading(true)
+            setTimeout(
+                () => {
+                   setCompleted(props.positive)
+                }, 200)
+        }, 300)
+}, [loading, props.positive])
+
+    return (
+        ! completed ? <PreloaderContainer />
+        : <Positive {...props} />
     )
 }
 

@@ -11,7 +11,7 @@ const GenresContainer = (props) => {
                 <div className="gernes_item">
                     <NavLink to='/Gallary/Landscapes' >
                     <div className="genres__link" >
-                        <b>Пейзажи</b>
+                        <p>Пейзажи</p>
                     </div>
                     <div className="landscapes">
                     </div>
@@ -20,7 +20,7 @@ const GenresContainer = (props) => {
                 <div className="gernes_item">
                     <NavLink to='/Gallary/Mountain-landscapes' >
                     <div className="genres__link">
-                        <b>Горные пейзажи</b>
+                        <p>Горные пейзажи</p>
                     </div>
                     <div className="mountain">
                     </div>
@@ -29,7 +29,7 @@ const GenresContainer = (props) => {
                 <div className="gernes_item">
                     <NavLink to='/Gallary/Seascapes' >
                     <div className="genres__link" >
-                        <b>Морские пейзажи</b>
+                        <p>Морские пейзажи</p>
                     </div>
                     <div className="seascapes">
                     </div>
@@ -38,7 +38,7 @@ const GenresContainer = (props) => {
                 <div className="gernes_item">
                     <NavLink to='/Gallary/Still-life'>
                         <div className="genres__link">
-                            <b>Натюрморты</b>
+                            <p>Натюрморты</p>
                         </div>
                         <div className="stillLife">
                         </div>
@@ -47,7 +47,7 @@ const GenresContainer = (props) => {
                 <div className="gernes_item">
                     <NavLink to='/Gallary/Positive'>
                         <div className="genres__link"  >
-                            <b>Позитив</b>
+                            <p>Позитив</p>
                         </div>
                         <div className="positive">
                         </div>

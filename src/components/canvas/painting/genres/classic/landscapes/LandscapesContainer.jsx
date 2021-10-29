@@ -7,14 +7,20 @@ import PreloaderContainer from "../../../../../common/Preloader/PreloaderContain
 
 const LandscapesContainer = (props) => {
 
+    const [loading, setLoading] = useState(undefined)
     const [completed, setCompleted] = useState(undefined)
+    
     
     useEffect(() => {
     setTimeout(
         () => {
+            setLoading(true)
+            setTimeout(
+                () => {
                    setCompleted(props.landscapes)
-                }, 700)
-}, [props.landscapes])
+                }, 200)
+        }, 300)
+}, [loading, props.landscapes])
 
     return (
         ! completed ? <PreloaderContainer />

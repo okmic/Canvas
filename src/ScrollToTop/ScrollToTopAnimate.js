@@ -1,20 +1,33 @@
-import * as React from "react";
-import { useScrollBy } from "react-use-window-scroll";
+import React, { useEffect, useState } from "react";
+import { useWindowScroll } from "react-use";
+import {BsFillArrowUpCircleFill} from "react-icons/bs"
 
-const HookExample = () => {
-  const scrollBy = useScrollBy();
-  return (
-    <div>
-      {/* Hard scroll down by 200 pixels */}
-      <button onClick={() => scrollBy(200, 0)}>Hard Scroll By 200</button>
-      {/* Smooth scroll down by 200 pixels */}
-      <button
-        onClick={() => scrollBy({ top: 200, left: 0, behavior: "smooth" })}
-      >
-        Smooth Scroll By 200
-      </button> ...
-    </div>
-  );
+const ScrollToTopAnimate = () => {
+    const { y: pageYOffset } = useWindowScroll();
+    const [visible, setVisiblity] = useState(false);
+
+    useEffect(() => {
+        if (pageYOffset > 400) {
+            setVisiblity(true);
+        } else {
+            setVisiblity(false);
+        }
+    }, [pageYOffset]);
+
+    const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+    if (!visible) {
+        return false;
+    }
+
+    return (
+        <div
+            className="scroll-to-top"
+            onClick={scrollToTop}
+        >
+            <BsFillArrowUpCircleFill size="35" color="#31190e" />
+        </div>
+    );
 };
 
-export default HookExample
+export default ScrollToTopAnimate;
