@@ -15,8 +15,9 @@
     transform: scale(0.9);
     transition: 0.5s;
     text-align: rigth;
-
 }
+
+
 .genres__link{
     position: absolute;
     font-size: 30px;
@@ -56,3 +57,14 @@
     transition: 1s;
     border-color: tomato;
 }
+
+.this__garnes{
+    animation: shodowBox 1.5s 1 forwards;
+    max-width: 95%;
+
+}
+
+@keyframes shodowBox {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }

@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import Seascapes from "./Seascapes";
 import {seascapesStatus, sendBasketTh } from "../../../../../../redux/canvasReducer";
+import PreloaderContainer from "../../../../../common/Preloader/PreloaderContainer";
 
 
 const SeascapesContainer = (props) => {
-    return(
-        <Seascapes {...props} />
+  
+    const [completed, setCompleted] = useState(undefined)
+
+    useEffect(() => {
+        setTimeout(
+            () => {
+                       setCompleted(props.seascapes)
+                    }, 700)
+    }, [props.landscapes])
+    
+        return (
+            ! completed ? <PreloaderContainer />
+            : <Seascapes {...props} />
     )
 }
 

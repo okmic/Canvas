@@ -1,6 +1,6 @@
 .preloader_cotnainer {
   position: absolute;
-  width: 100%;
+  width: 50%;
   height: 70vh;
   display: flex;
   justify-content: center;

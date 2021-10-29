@@ -4,7 +4,7 @@ import CanvasData from "../../accessories/CanvasData";
 
 const StillLife = (props) => {
     return (
-        <>
+        <div className="this__garnes">
             {props.stillLife.map(p => {
                 return <CanvasData
                     key={p.id}
@@ -15,14 +15,11 @@ const StillLife = (props) => {
                     price={p.price}
                     description={p.description}
                     buttonState={p.buttonState}
-                    buttonBasketAC={props.buttonBasketAC}
-                    buttonBasketACUp={props.buttonBasketACUp}
-                    genres={props.stillLife.genres}
                     removeStatus={props.stillLifeStatus}
                 />
             })
             }
-        </>
+        </div>
     )
 }
 

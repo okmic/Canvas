@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { landscapesStatus, mountainStatus, positiveStatus, seascapesStatus, stillLifeStatus } from "../../redux/canvasReducer";
 import { orderStatus, removeItemTh } from "../../redux/canvasReducerCopy";
-import ScrollToTop from "../../ScrollToTop";
+import ScrollToTop from "../../ScrollToTop/ScrollToTop";
 
 
 import PreloaderContainer from "../common/Preloader/PreloaderContainer";

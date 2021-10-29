@@ -4,7 +4,7 @@ import CanvasData from "../../../accessories/CanvasData";
 
 const Seascapes = (props) => {
     return (
-        <>
+        <div className="this__garnes">
             {props.seascapes.map(p => {
                 return <CanvasData
                     key={p.id}
@@ -15,14 +15,11 @@ const Seascapes = (props) => {
                     price={p.price}
                     description={p.description}
                     buttonState={p.buttonState}
-                    buttonBasketAC={props.buttonBasketAC}
-                    buttonBasketACUp={props.buttonBasketACUp}
-                    genres={props.seascapes.genres}
                     removeStatus={props.seascapesStatus}
                 />
             })
             }
-        </>
+        </div>
     )
 }
 

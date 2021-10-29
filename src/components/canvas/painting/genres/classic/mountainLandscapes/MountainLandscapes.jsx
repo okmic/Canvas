@@ -3,7 +3,7 @@ import CanvasData from "../../../accessories/CanvasData";
 
 const MountainLandscapes = (props) => {
     return (
-        <>
+        <div className="this__garnes">
             {props.mountainLandscapes.map(p => {
                 return <CanvasData
                     key={p.id}
@@ -14,14 +14,11 @@ const MountainLandscapes = (props) => {
                     price={p.price}
                     description={p.description}
                     buttonState={p.buttonState}
-                    buttonBasketAC={props.buttonBasketAC}
-                    buttonBasketACUp={props.buttonBasketACUp}
-                    genres={props.mountainLandscapes.genres}
                     removeStatus={props.mountainStatus}
                 />
             })
             }
-        </>
+        </div>
     )
 }
 

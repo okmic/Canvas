@@ -5,7 +5,7 @@ import CanvasData from "../../accessories/CanvasData"
 const Positive = (props) => {
 
     return(
-        <>
+        <div className="this__garnes">
         {props.positive.map(p => {
             return <CanvasData
                 key={p.id}
@@ -16,14 +16,11 @@ const Positive = (props) => {
                 price={p.price}
                 description={p.description}
                 buttonState={p.buttonState}
-                buttonBasketAC={props.buttonBasketAC}
-                buttonBasketACUp={props.buttonBasketACUp}
-                genres={props.positive.genres}
                 removeStatus={props.positiveStatus}
             />
         })
         }
-    </>
+    </div>
     )
 }
 

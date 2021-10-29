@@ -2,8 +2,6 @@ import initialState from "./canvasData"
 
 const SEND_BASKET = 'SEND_BASKET'
 const REMOVE_ITEM = 'REMOVE_ITEM'
-const REMOVE_STATUS = 'REMOVE_STATUS'
-const REMOVE_STATUS_UP = 'REMOVE_STATUS_UP'
 const ORDER_STATUS = 'ORDER_STATUS'
 
 const LANDSCAPES_STATUS = "LANDSCAPES_STATUS"
@@ -24,11 +22,6 @@ const canvasReduser = (state = initialState, action) => {
                     price: action.price,
                 }],
             }
-        }
-        case REMOVE_STATUS: {
-        }
-        case REMOVE_STATUS_UP: {
-            return { ...state, paintingData: state.paintingData.map(p => p.id === action.id ? { ...p, buttonState: !p.buttonState } : p) }
         }
         case REMOVE_ITEM: {
             return {
@@ -63,8 +56,6 @@ const canvasReduser = (state = initialState, action) => {
 }
 
 export const sendBasket = (id, imgName, paintingName, price) => ({ type: SEND_BASKET, id, imgName, paintingName, price})
-export const buttonBasketAC = (id) => ({ type: REMOVE_STATUS, id })
-export const buttonBasketACUp = (id) => ({ type: REMOVE_STATUS_UP, id })
 export const removeItem = (id) => ({ type: REMOVE_ITEM, payload: id })
 export const orderStatus = () => ({ type: ORDER_STATUS})
 

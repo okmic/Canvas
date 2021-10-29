@@ -1,13 +1,12 @@
 .contPainting{
-    max-width: 95vw;
+    width: 95vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #ffffff;
-
 }
 .boxPainting{
-    max-width: 900px;
+    width: 100%;
+    max-width: 750px;
     background: linear-gradient(45deg, #964b00, #703801);
     border:#D1BC8A 1px solid;
     border-radius: 15px;
@@ -52,13 +51,13 @@
     transform: scale(1);
 }
   
-
 @keyframes buttonGallery {
     0%{transform: scale(1); margin-right: 150px;}
     30%{margin-right: 0px;}
     50%{margin-left: 150px;}
     100%{transform: scale(1); margin-left: 0; }
   }
+
 
 .description{
     word-wrap: break-word;
