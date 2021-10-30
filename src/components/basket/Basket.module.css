@@ -49,14 +49,15 @@
 }
 .image{
     cursor: pointer;
-    max-width: 100px;
-    max-height: 50px;
-    background-color: #ffc7dd;
-    border: #8f827c double 9px;
+    background-color: #8a5d35;
+    border: #31190e double 9px;
     display: flex;
     align-items: center;
 }
-
+.image img {
+    max-width: 50px;
+    max-height: 70px;
+}
 .description{
     display: flex;
     flex-direction: column;
@@ -121,6 +122,21 @@
     border: 1px tomato solid;
     animation: submitOrderActive 1.5s 1 forwards;
 }
+
+.button {
+    background-color: rgba(13, 13, 13, 0.445);
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 7px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  .button:hover {
+    background-color: rgb(0, 0, 0);
+    transition: 1s;
+  }
+  in
 
 .submit__order:hover{ transform: scale(1); transition: 1s;}
 .submit__order_active:hover{ transform: scale(1); transition: 1s;}

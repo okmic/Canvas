@@ -30,11 +30,11 @@
 }
 iframe {
     display: block;
-    max-width: 50%;
-    min-width: 350px;
+    min-width: 290px;
+    max-width: 49%;
     max-height: 50%;
     margin: 0px 0px 75px 0px;
     padding: 3px;
     border: blanchedalmond 3px double;
-    border-radius: 5%;
+    border-radius: 15px;
 }

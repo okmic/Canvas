@@ -11,6 +11,7 @@ footer {
     align-items: center;
     justify-content: space-evenly;
     border-bottom: tomato 3px solid;    
+    z-index: 10;
 }
 
 .links__container {

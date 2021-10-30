@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import {orderStatus, removeItemTh, landscapesStatus, mountainStatus, positiveStatus, seascapesStatus, stillLifeStatus } from "../../redux/canvasReducer";
 import ScrollToTop from "../../ScrollToTop/ScrollToTop";
-
-
-import PreloaderContainer from "../common/Preloader/PreloaderContainer";
+import PreloaderContainerHesh from "../common/Preloader/PreloaderContainer";
 import Basket from "./Basket";
 
 
@@ -35,7 +33,7 @@ let BasketContainer = React.memo(props => {
     }
 
     return (
-        ! completed ? <PreloaderContainer />
+        ! completed ? <PreloaderContainerHesh />
         : <Basket  
         totalPrice={props.totalPrice} 
         paintings={props.paintings}  

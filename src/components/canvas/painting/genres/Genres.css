@@ -3,6 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 900px;
 }
 .gernes_item{
     position: relative;
@@ -49,7 +50,8 @@
 }
 
 .this__garnes{
-    animation: shodowBox 1.5s 1 forwards;
+    animation: shodowBox 0.7s linear 1.15s 1 forwards;
+    opacity: 0;
 }
 
 @keyframes shodowBox {
@@ -57,6 +59,6 @@
     opacity: 0;
     }
     100%{
-    opacity: 1;
+        opacity: 1;
     }
   }

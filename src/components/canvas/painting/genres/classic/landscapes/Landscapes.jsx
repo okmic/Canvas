@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Preloader from "../../../../../common/Preloader/Preloader";
+import PreloaderIn from "../../../../../common/Preloader/inPreloader";
 import CanvasData from "../../../accessories/CanvasData";
 import Breadcrumbs from '../../../../../common/Breadcrumbs/Breadcrumbs'
 
@@ -10,13 +10,14 @@ const Landscapes = (props) => {
     useEffect(() =>{
         setTimeout(() => {
             setLoading(false)
-        }, 500)
+        }, 1150)
     }, [props.landscapes])
 
     return (
-        loading ? <Preloader />
-        : <div className="this__garnes">
-            <Breadcrumbs 
+        <div>
+        <PreloaderIn preloaderStatus={loading} />
+        <div className="this__garnes">
+        <Breadcrumbs 
         linkOne="Главная"
         linkTwo="Галерея"
         activeLink="Пейзажи"
@@ -35,7 +36,7 @@ const Landscapes = (props) => {
                 />
             })
             }
-
+        </div>
         </div>
     )
 }

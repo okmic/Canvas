@@ -40,7 +40,7 @@ let Basket = (props) => {
                             <GiBasket size="50" />
                             <h3>В вашей корзине пока ничего нет</h3>
                         </div>
-                        <button className={"button" + " " + s.button_translete} >
+                        <button className={s.button + " " + s.button_translete} >
                             <NavLink to="/Gallery" className={s.button_null} >
                                 <RiGalleryLine size="30" />
                                 <span>&larr;</span>

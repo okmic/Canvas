@@ -4,29 +4,24 @@ import logo from '../img/logo.png'
 import koni from '../img/koni.jpg'
 import Content from './Content/Content';
 import Contact from '../contact/Contact';
-import PreloaderContainer from '../common/Preloader/PreloaderContainer';
+import PreloaderOut from '../common/Preloader/Preloader';
 
 
 const Home = React.memo(props => {
 
-    const [loading, setLoading] = useState(undefined)
-    const [completed, setCompleted] = useState(undefined)
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-    setTimeout(
-        () => {
-            setLoading(true)
-            setTimeout(
-                () => {
-                   setCompleted(true)
-                }, 500)
-        }, 500)
-}, [loading])
+        setTimeout(
+            () => {
+                setLoading(false)
+            }, 900)
+    }, [loading])
 
     return (
-        !completed 
-        ? <PreloaderContainer /> 
-        :   <div className="container__home">
+        <>
+        <div className="container__home">
+        <PreloaderOut preloaderStatus={loading} />
             <div className="conteinerHome">
                 <div className="logo">
                     <img src={logo} alt={"Art Fine on Canvas"} />
@@ -43,7 +38,8 @@ const Home = React.memo(props => {
             <Content />
             <Contact />
         </div>
-        )
+        </>
+    )
 })
 
 export default Home

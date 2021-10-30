@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './contact.css';
 import logok from '../img/logok.jpg'
-import PreloaderContainer from '../common/Preloader/PreloaderContainer';
+import PreloaderContainerHesh from '../common/Preloader/PreloaderContainer';
 
 
 const Contact = React.memo(props => {
@@ -20,7 +20,7 @@ const Contact = React.memo(props => {
 }, [loading])
 
     return (
-        !completed ? <PreloaderContainer />
+        !completed ? <PreloaderContainerHesh />
         :
         <div className="contact">
             <img src={logok} alt="Art Fine on Canvas" className="logoContact"/>

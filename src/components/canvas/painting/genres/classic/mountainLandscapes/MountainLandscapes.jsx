@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Breadcrumbs from "../../../../../common/Breadcrumbs/Breadcrumbs";
-import Preloader from "../../../../../common/Preloader/Preloader";
+import PreloaderIn from "../../../../../common/Preloader/inPreloader";
 import CanvasData from "../../../accessories/CanvasData";
 
 const MountainLandscapes = (props) => {
@@ -10,12 +10,13 @@ const MountainLandscapes = (props) => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 500)
+        }, 1150)
     }, [props.mountainLandscapes])
 
     return (
-        loading ? <Preloader />
-            : <div className="this__garnes">
+        <div>
+            <PreloaderIn preloaderStatus={loading} />
+            <div className="this__garnes">
                 <Breadcrumbs
                     linkOne="Главная"
                     linkTwo="Галерея"
@@ -36,6 +37,7 @@ const MountainLandscapes = (props) => {
                 })
                 }
             </div>
+        </div>
     )
 }
 
