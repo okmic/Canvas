@@ -8,51 +8,20 @@ const GenresContainer = (props) => {
     return (
         <Suspense fallback={PreloaderContainer}>
             <div className="genresBox">
-                <div className="gernes_item">
-                    <NavLink to='/Gallary/Landscapes' >
-                    <div className="genres__link" >
-                        <p>Пейзажи</p>
+                {props.genres.map(g =>
+                    <div key={g.id} className="gernes_item">
+                        <NavLink className="genres__link_container" to={g.url} >
+                            <div className="genres__link" >
+                                <p>{g.title}</p>
+                            </div>
+                            <div className="genres__img">
+                                <img src={g.imgName} alt={g.imgName} />
+                            </div>
+                        </NavLink>
                     </div>
-                    <div className="landscapes">
-                    </div>
-                    </NavLink>
-                </div>
-                <div className="gernes_item">
-                    <NavLink to='/Gallary/Mountain-landscapes' >
-                    <div className="genres__link">
-                        <p>Горные пейзажи</p>
-                    </div>
-                    <div className="mountain">
-                    </div>
-                    </NavLink>
-                </div>
-                <div className="gernes_item">
-                    <NavLink to='/Gallary/Seascapes' >
-                    <div className="genres__link" >
-                        <p>Морские пейзажи</p>
-                    </div>
-                    <div className="seascapes">
-                    </div>
-                    </NavLink>
-                </div>
-                <div className="gernes_item">
-                    <NavLink to='/Gallary/Still-life'>
-                        <div className="genres__link">
-                            <p>Натюрморты</p>
-                        </div>
-                        <div className="stillLife">
-                        </div>
-                    </NavLink>
-                </div>
-                <div className="gernes_item">
-                    <NavLink to='/Gallary/Positive'>
-                        <div className="genres__link"  >
-                            <p>Позитив</p>
-                        </div>
-                        <div className="positive">
-                        </div>
-                    </NavLink>
-                </div>
+                )
+                }
+
             </div>
 
         </Suspense>

@@ -5,7 +5,7 @@ import GenresContainer from './painting/genres/GenresContainer';
 
 
 
-const Paintings = () => {
+const Paintings = (props) => {
 
     return (
         <div className="canvas__container_index">
@@ -14,7 +14,7 @@ const Paintings = () => {
                     <img src={logo} alt={"Fine Art on Canvas"} />
                 </div>
                 <div className='contCanvas'>
-                    <GenresContainer />
+                    <GenresContainer genres={props.genres} />
                 </div>
             </div>
         </div>

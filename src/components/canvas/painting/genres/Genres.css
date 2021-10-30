@@ -6,8 +6,8 @@
 }
 .gernes_item{
     position: relative;
-    min-width: 300px;
-    min-height: 150px;
+    max-width: 255px;
+    max-height: 180px;
     background-color: black;
     border: blanchedalmond 1px solid;
     margin: 15px;
@@ -15,46 +15,37 @@
     transform: scale(0.9);
     transition: 0.5s;
     text-align: rigth;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.308);
 }
-
 
 .genres__link{
     position: absolute;
-    font-size: 30px;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.landscapes, .mountain, .seascapes, .stillLife, .positive {
     width: 100%;
     height: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    opacity: 0.5;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.308) ;
+    background-color: rgba(0, 0, 0, 0.555);
+    font-size: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    text-align: center;
 }
-.landscapes {
-    background-image: url(../../../img/canvas/img_1.jpeg);
+
+.genres__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.mountain{
-    background-image: url(../../../img/canvas/img_9.jpg);
+.genres__img img {
+    max-width: 100%;
+    height: 180px;
 }
-.seascapes{
-    background-image: url(../../../img/canvas/img_4.jpg);
-}
-.stillLife{
-    background-image: url(../../../img/canvas/img_3.jpg);
-}
-.positive{
-    background-image: url(../../../img/canvas/img_12.jpg);
-}
+
 .gernes_item:hover{
     transform: scale(1);
     transition: 1s;
     border-color: tomato;
+    box-shadow: 5px 5px 5px 5px rgba(255, 99, 71, 0.330);
 }
 
 .this__garnes{

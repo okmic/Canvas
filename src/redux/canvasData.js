@@ -1,3 +1,9 @@
+import back1 from '../components/img/background/back_1.jpg'
+import back2 from '../components/img/background/back_2.jpg'
+import back3 from '../components/img//background/back_3.jpeg'
+import back4 from '../components/img//background/back_4.jpg'
+import back5 from '../components/img//background/back_5.jpeg'
+
 import img1 from '../components/img/canvas/img_1.jpeg'
 import img2 from '../components/img/canvas/img_2.jpg';
 import img3 from '../components/img/canvas/img_3.jpg';
@@ -13,7 +19,6 @@ import img12 from '../components/img/canvas/img_12.jpg';
 import img13 from '../components/img/canvas/img_13.jpg';
 import img14 from '../components/img/canvas/img_14.jpg';
 import img15 from '../components/img/canvas/img_15.jpg';
-
 import img16 from '../components/img/canvas/img_16.jpeg'
 import img17 from '../components/img/canvas/img_17.jpeg'
 import img18 from '../components/img/canvas/img_18.jpeg'
@@ -29,7 +34,6 @@ import img27 from '../components/img/canvas/img_27.jpeg'
 import img28 from '../components/img/canvas/img_28.jpeg'
 import img29 from '../components/img/canvas/img_29.jpeg'
 import img30 from '../components/img/canvas/img_30.jpeg'
-
 import img31 from '../components/img/canvas/img_31.jpeg'
 import img32 from '../components/img/canvas/img_32.jpeg'
 import img33 from '../components/img/canvas/img_33.jpeg'
@@ -45,7 +49,6 @@ import img42 from '../components/img/canvas/img_42.jpeg'
 import img43 from '../components/img/canvas/img_43.jpeg'
 import img44 from '../components/img/canvas/img_44.jpeg'
 import img45 from '../components/img/canvas/img_45.jpeg'
-
 import img46 from '../components/img/canvas/img_46.jpeg'
 import img47 from '../components/img/canvas/img_47.jpeg'
 import img48 from '../components/img/canvas/img_48.jpeg'
@@ -61,7 +64,6 @@ import img57 from '../components/img/canvas/img_57.jpeg'
 import img58 from '../components/img/canvas/img_58.jpeg'
 import img59 from '../components/img/canvas/img_59.jpeg'
 import img60 from '../components/img/canvas/img_60.jpeg'
-
 import img61 from '../components/img/canvas/img_61.jpeg'
 import img62 from '../components/img/canvas/img_62.jpeg'
 import img63 from '../components/img/canvas/img_63.jpeg'
@@ -83,6 +85,13 @@ import img76 from '../components/img/canvas/img_76.jpg'
 
 const initialState = {
     basket: [],
+    genres:[
+        {id: 1, imgName: back1, title: "Пейзажи", url: "/Gallary/Landscapes"},
+        {id: 2, imgName: back2, title: "Горные пейзажи", url: "/Gallary/Mountain-landscapes"},
+        {id: 3, imgName: back3, title: "Морские пейзажи", url: "/Gallary/Seascapes"},
+        {id: 4, imgName: back4, title: "Натюрморты", url: "/Gallary/Still-life"},
+        {id: 5, imgName: back5, title: "Позитив", url: "/Gallary/Positive"}
+    ],
     landscapes:[
         { id: 101, imgName: img1, paintingName: "Березы освещенные солнцем", price: 10000, buttonState: true,  description: {meterial: "Холст маслом", size: "Размер: 55х74"} },
         { id: 107, imgName: img7, paintingName: "Дубы Петра Великого", price: 100000, buttonState: true, description: {meterial: "Холст маслом", size: "Размер 75х117"} },
