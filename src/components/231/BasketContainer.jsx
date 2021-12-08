@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import {orderStatus, removeItemTh, landscapesStatus, mountainStatus, positiveStatus, seascapesStatus, stillLifeStatus } from "../../redux/canvasReducer";
 import ScrollToTop from "../../ScrollToTop/ScrollToTop";
 import PreloaderContainerHesh from "../common/Preloader/PreloaderContainer";
 import Basket from "./Basket";
@@ -22,12 +21,12 @@ let BasketContainer = React.memo(props => {
     }, [loading])
 
     const removeItem = (id) => {
-       props.removeItemTh(id)
+       props.actions.removeItemTh(id)
            } 
 
     const removeOrderStatus = () => {
         return(
-            props.orderStatus(),
+            props.actions.orderStatus(),
             <ScrollToTop />
         )
     }
@@ -35,13 +34,13 @@ let BasketContainer = React.memo(props => {
     return (
         ! completed ? <PreloaderContainerHesh />
         : <Basket  
-        totalPrice={props.totalPrice} 
+        totalPrice={props.actions.totalPrice} 
         paintings={props.paintings}  
         removeItem={removeItem} 
-        buttonBasketACUp={props.buttonBasketACUp} 
+        buttonBasketACUp={props.actionsbuttonBasketACUp} 
         removeOrderStatus={removeOrderStatus} 
         order={props.order} 
-        landscapesStatus={props.landscapesStatus}
+        landscapesStatus={props.actionslandscapesStatus}
         {...props}
         />
     )
@@ -55,6 +54,5 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {
-    removeItemTh, orderStatus, landscapesStatus, mountainStatus, seascapesStatus, stillLifeStatus, positiveStatus}
+export default connect(mapStateToProps, {actions}
     )(BasketContainer)

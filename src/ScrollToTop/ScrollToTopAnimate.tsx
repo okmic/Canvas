@@ -12,12 +12,12 @@ const ScrollToTopAnimate = () => {
         } else {
             setVisiblity(false);
         }
-    }, [pageYOffset]);
+    }, [pageYOffset])
 
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
     if (!visible) {
-        return false;
+        return null
     }
 
     return (

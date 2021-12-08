@@ -81,9 +81,41 @@ import img74 from '../components/img/canvas/img_74.jpg'
 import img75 from '../components/img/canvas/img_75.jpg'
 import img76 from '../components/img/canvas/img_76.jpg'
 
+export type basketType = {
+    id: number
+    imgName: string
+    title: string
+}
+export type GenresType = {
+    id: number
+    imgName: string
+    title: string
+    url: string
+}
+export type PaitingsType = {
+    id: number
+    imgName: string
+    paintingName: string
+    price: number
+    buttonState: boolean
+    description: {
+        meterial: string
+        size: string
+    }
+}
 
+export type InitialStateType = {
+    basket: Array<basketType>
+    genres: Array<GenresType>
+    landscapes: Array<PaitingsType>
+    mountainLandscapes: Array<PaitingsType>
+    seascapes: Array<PaitingsType>
+    stillLife: Array<PaitingsType>
+    positive: Array<PaitingsType>
+    order: boolean
+}
 
-const initialState = {
+const initialState: InitialStateType = {
     basket: [],
     genres:[
         {id: 1, imgName: back1, title: "Пейзажи", url: "/Gallary/Landscapes"},

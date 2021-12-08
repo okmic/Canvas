@@ -1,5 +1,5 @@
 import initialState from "./canvasData"
-
+import { Dispatch } from "redux"
 const SEND_BASKET = 'SEND_BASKET'
 const REMOVE_ITEM = 'REMOVE_ITEM'
 const ORDER_STATUS = 'ORDER_STATUS'
@@ -10,7 +10,7 @@ const SEASCAPES_STATUS = "SEASCAPES_STATUS"
 const STILLLIFE_STATUS = "STILLLIFE_STATUS"
 const POSITIVE_STATUS = "POSITIVE_STATUS"
 
-const canvasReduser = (state = initialState, action) => {
+const canvasReduser = (state = initialState, action: ActionsTypes) => {
     switch (action.type) {
         case SEND_BASKET: {
             return {
@@ -55,25 +55,55 @@ const canvasReduser = (state = initialState, action) => {
     }
 }
 
-export const sendBasket = (id, imgName, paintingName, price) => ({ type: SEND_BASKET, id, imgName, paintingName, price})
-export const removeItem = (id) => ({ type: REMOVE_ITEM, payload: id })
-export const orderStatus = () => ({ type: ORDER_STATUS})
+type ActionsTypes = SendBasketType | RemoveItemType | OrderStatusType | LandscapesStatusType
+| MountainStatusType | SeascapesStatusType | PositiveStatusType | StillLifeStatusType
 
-export const landscapesStatus = (id) => ({ type: LANDSCAPES_STATUS, id})
-export const mountainStatus = (id) => ({ type: MOUNTAIN_STATUS, id})
-export const seascapesStatus = (id) => ({ type: SEASCAPES_STATUS, id})
-export const stillLifeStatus = (id) => ({ type: STILLLIFE_STATUS, id})
-export const positiveStatus = (id) => ({ type: POSITIVE_STATUS, id})
+type SendBasketType = {
+    type: typeof SEND_BASKET
+    id: number
+    imgName: string,
+    paintingName: string,
+    price: number
+}
+export const sendBasket = (
+    id: number,
+    imgName: string,
+    paintingName: string,
+    price: number
+    ): SendBasketType => ({ type: SEND_BASKET, id, imgName, paintingName, price})
 
+type RemoveItemType = {type: typeof REMOVE_ITEM, payload: number}
+export const removeItem = (id: number):RemoveItemType => ({ type: REMOVE_ITEM, payload: id })
 
+type OrderStatusType = {type: typeof ORDER_STATUS}
+export const orderStatus = ():OrderStatusType => ({ type: ORDER_STATUS})
 
+type LandscapesStatusType = {type: typeof LANDSCAPES_STATUS, id: number}
+export const landscapesStatus = (id: number):LandscapesStatusType => ({ type: LANDSCAPES_STATUS, id})
 
-export const sendBasketTh = (id, imgName, paintingName, price) => (dispatch) => {
+type MountainStatusType = {type: typeof MOUNTAIN_STATUS, id: number}
+export const mountainStatus = (id: number):MountainStatusType => ({ type: MOUNTAIN_STATUS, id})
+
+type SeascapesStatusType = {type: typeof SEASCAPES_STATUS, id: number}
+export const seascapesStatus = (id: number):SeascapesStatusType => ({ type: SEASCAPES_STATUS, id})
+
+type StillLifeStatusType = {type: typeof STILLLIFE_STATUS, id: number}
+export const stillLifeStatus = (id: number):StillLifeStatusType => ({ type: STILLLIFE_STATUS, id})
+
+type PositiveStatusType = {type: typeof POSITIVE_STATUS, id: number}
+export const positiveStatus = (id: number):PositiveStatusType => ({ type: POSITIVE_STATUS, id})
+
+type DispatchType = Dispatch<ActionsTypes>
+
+export const sendBasketTh = (        
+    id: number,
+    imgName: string,
+    paintingName: string,
+    price: number) => (dispatch: DispatchType) => {
     dispatch(sendBasket(id, imgName, paintingName, price));
 }
-export const removeItemTh = (id) => (dispatch) => {
-    dispatch(removeItem(id));
-
+export const removeItemTh = (id: number) => (dispatch: DispatchType) => {
+    dispatch(removeItem(id))
 }
 
 
