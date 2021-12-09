@@ -9,7 +9,7 @@ type PropsType = {
     title: string
     activeBasket?: boolean | undefined
 }
-const Item: React.FC<PropsType> = (props) =>  <NavLink to={props.path} /* activeClassName="active"  */>
+const Item: React.FC<PropsType> = (props) =>  <NavLink to={props.path}>
             <div className={styles.links__container}>
             <div className={styles.links__icon}>
             <props.children /> 
