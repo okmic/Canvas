@@ -7,6 +7,43 @@ let redusers = combineReducers(
         canvasReduser
     }
 )
+/* type basketDataType = {
+    id: number
+    imgName: string
+    title: string
+}
+type basketType = [] | basketDataType
+
+export type GenresType = {
+    id: number
+    imgName: string
+    title: string
+    url: string
+}
+export type PaitingsType = {
+    id: number
+    imgName: string
+    paintingName: string
+    price: number
+    buttonState: boolean
+    description: {
+        meterial: string
+        size: string
+    }
+}
+
+export type AppStateType = {
+    canvasReduser: {
+        basket: Array<basketType>
+        genres: Array<GenresType>
+        landscapes: Array<PaitingsType>
+        mountainLandscapes: Array<PaitingsType>
+        seascapes: Array<PaitingsType>
+        stillLife: Array<PaitingsType>
+        positive: Array<PaitingsType>
+        order: boolean
+    }
+} */
 
 type RootReducerType = typeof redusers
 export type AppStateType = ReturnType<RootReducerType>

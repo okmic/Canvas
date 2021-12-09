@@ -60,6 +60,7 @@ a {
   color: #fff;
   text-decoration: none;
 }
+a.active{color:#89b3e4; font-weight: 900;}
 a:hover{
   transition: 1s;
  color: #89b3e4;

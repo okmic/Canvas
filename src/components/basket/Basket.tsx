@@ -56,7 +56,7 @@ let Basket: React.FC<PropsType> = (props) => {
                         <button className={s.button + " " + s.button_translete} >
                             <NavLink to="/Gallery" className={s.button_null} >
                                 <RiGalleryLine size="30" />
-                                <span>&&larr;</span>
+                                <span>&larr;</span>
                                 <span>В галерею</span>
                             </NavLink>
                         </button>
@@ -70,11 +70,11 @@ let Basket: React.FC<PropsType> = (props) => {
                             </div>
                             <div className={s.description}>
                                 <span className={s.description__name}>{p.paintingName}</span>
-                                <span>{p.price} &&#8381; </span>
+                                <span>{p.price} &#8381; </span>
                             </div>
                         </div>
                         <div className={s.close}  >
-                            <button className="button" onClick={() => onChangeStatus(p.id)}>&&#10006;</button>
+                            <button className="button" onClick={() => onChangeStatus(p.id)}>&#10006;</button>
                         </div>
                         <Modal active={modal} setActive={setModal}>
                              <img src={p.imgName} alt={p.imgName} />

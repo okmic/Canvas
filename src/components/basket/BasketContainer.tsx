@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { basketType } from "../../redux/canvasData";
 import {orderStatus, removeItemTh, landscapesStatus, mountainStatus, positiveStatus, seascapesStatus, stillLifeStatus } from "../../redux/canvasReducer";
-import { AppStateType } from "../../redux/store";
 import ScrollToTop from "../../ScrollToTop/ScrollToTop";
 import PreloaderContainerHesh from "../common/Preloader/PreloaderContainer";
 import Basket from "./Basket";
 
 type MapStatePropsType = {
     paintings: Array<basketType>
-    totalPrice: number
     order: boolean
 }
 
@@ -29,6 +27,8 @@ let BasketContainer: React.FC<MapStatePropsType & MapDispatchPropsType | any> = 
     const [loading, setLoading] = useState(false)
     const [completed, setCompleted] = useState(false)
     
+    const totalPrice = props.paintings.reduce((total: number, item: {price: number}) => total + item.price, 0)
+
     useEffect(() => {
         setTimeout(
             () => {
@@ -54,7 +54,7 @@ let BasketContainer: React.FC<MapStatePropsType & MapDispatchPropsType | any> = 
     return (
         ! completed ? <PreloaderContainerHesh />
         : <Basket  
-        totalPrice={props.totalPrice} 
+        totalPrice={totalPrice} 
         paintings={props.paintings}  
         removeItem={removeItem} 
         buttonBasketACUp={props.buttonBasketACUp} 
@@ -69,11 +69,10 @@ let BasketContainer: React.FC<MapStatePropsType & MapDispatchPropsType | any> = 
 const mapStateToProps = (state: any): MapStatePropsType => {
     return {
         paintings: state.canvasReduser.basket,
-        totalPrice: state.canvasReduser.basket.reduce((total: number, item: {price: number}) => total + item.price, 0),
         order: state.canvasReduser.order,
     }
 }
 
-export default connect<MapStatePropsType, MapDispatchPropsType, AppStateType | any>(mapStateToProps, {
+export default connect<MapStatePropsType, MapDispatchPropsType>(mapStateToProps, {
     removeItemTh, orderStatus, landscapesStatus, mountainStatus, seascapesStatus, stillLifeStatus, positiveStatus}
     )(BasketContainer)

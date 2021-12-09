@@ -24,9 +24,12 @@ const canvasReduser = (state = initialState, action: ActionsTypes) => {
             }
         }
         case REMOVE_ITEM: {
-            return {
-                ...state,
+            if (state.basket) {
+                return { ...state,
                 basket: state.basket.filter(o => o.id !== action.payload),
+                }
+            } else {
+                return state
             }
         }
         case ORDER_STATUS: {
