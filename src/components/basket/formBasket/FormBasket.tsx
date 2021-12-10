@@ -4,7 +4,7 @@ import styles from "./FormBasket.module.css"
 type PropsType = {
     name: string
     surname: string
-    phone: number
+    phone: string
     email: string
     order: boolean
     handleSubmit: (event: React.MouseEvent<HTMLFormElement>) => any
@@ -12,7 +12,7 @@ type PropsType = {
     handleSurnameChanged: (event: React.ChangeEvent<HTMLInputElement>) => any
     handlePfoneChanged: (event: React.ChangeEvent<HTMLInputElement>) => any
     handleEmailChanged: (event: React.ChangeEvent<HTMLInputElement>) => any
-    handleButton: (name: string, surname: string, phone: number, email: string) => any
+    handleButton: (name: string, surname: string, phone: string, email: string) => any
 }
 
 let FormBasket: React.FC<PropsType> = (props) => {

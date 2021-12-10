@@ -8,7 +8,7 @@ type PropsType = {
 let FormBasketContainer: React.FC<PropsType> = (props) => {
     const [name, setName] = useState({name: ''})
     const [surname, setSurname] = useState({surname: ''})
-    const [phone, setPhone] = useState({phone: Number('')})
+    const [phone, setPhone] = useState({phone: ''})
     const [email, setEmail] = useState({email: ''})
 
     let handleSubmit = (event: React.MouseEvent<HTMLFormElement>) => {
@@ -24,14 +24,14 @@ let FormBasketContainer: React.FC<PropsType> = (props) => {
     } 
 
     let handlePfoneChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setPhone({phone: Number(event.target.value)})
+        setPhone({phone: event.target.value})
     } 
 
     let handleEmailChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
         setEmail({email: event.target.value})
     } 
 
-    const handleButton = (name: string, surname: string, phone: number, email: string) => {
+    const handleButton = (name: string, surname: string, phone: string, email: string) => {
         let array = [
             { "Имя пользователя: ": name },
             {"Фамилия пользователя: ": surname},

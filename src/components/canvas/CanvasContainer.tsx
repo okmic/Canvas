@@ -7,11 +7,8 @@ const PaintingsContainer: React.FC<PropsType> = (props) => {
     return <Paintings genres={props.genres} />
 }
 
-const mapStateToProps = (state: any) => {
-    return{
-        genres: state.canvasReduser.genres
-    }
-}
+const mapStateToProps = (state: any): PropsType => ({genres: state.canvasReduser.genres})
+
 type PropsType = {
     genres: Array<GenresType>
 }

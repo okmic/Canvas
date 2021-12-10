@@ -20,7 +20,7 @@ const StillLifeContainer = lazy(() => import('./components/canvas/painting/genre
 const PositiveContainer = lazy(() => import('./components/canvas/painting/genres/positive/PositiveContainer'))
 
 
-function App(): any {
+function App() {
   return (
         <Suspense fallback={PreloaderContainer}>
         <div className="container__app">
@@ -30,9 +30,7 @@ function App(): any {
             <ScrollToTop />
             <Routes>
             <Route  path='/Home'  element={<Home />} />
-
-            <Route path='/Gallery' 
-            element={<PaintingsContainer />} />
+            <Route path='/Gallery' element={<PaintingsContainer />} />
             <Route path='/Basket' element={<BasketContainer />} />
             <Route path='/Contacts' element={<Contact />} />
             <Route  path='/Gallary/Still-life'  element={<StillLifeContainer />} />
