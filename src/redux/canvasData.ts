@@ -90,7 +90,7 @@ export type basketType = basketDataType
 
 export type GenresType = {
     id: number
-    imgName: string
+    imgName: any
     title: string
     url: string
 }
@@ -118,14 +118,14 @@ export type InitialStateType = {
 }
 
 const initialState: InitialStateType = {
-    basket: [],
+    basket: [] as Array<basketType>,
     genres:[
         {id: 1, imgName: back1, title: "Пейзажи", url: "/Gallary/Landscapes"},
         {id: 2, imgName: back2, title: "Горные пейзажи", url: "/Gallary/Mountain-landscapes"},
         {id: 3, imgName: back3, title: "Морские пейзажи", url: "/Gallary/Seascapes"},
         {id: 4, imgName: back4, title: "Натюрморты", url: "/Gallary/Still-life"},
         {id: 5, imgName: back5, title: "Позитив", url: "/Gallary/Positive"}
-    ],
+    ] as Array<GenresType>,
     landscapes:[
         { id: 101, imgName: img1, paintingName: "Березы освещенные солнцем", price: 10000, buttonState: true,  description: {meterial: "Холст маслом", size: "Размер: 55х74"} },
         { id: 107, imgName: img7, paintingName: "Дубы Петра Великого", price: 100000, buttonState: true, description: {meterial: "Холст маслом", size: "Размер 75х117"} },

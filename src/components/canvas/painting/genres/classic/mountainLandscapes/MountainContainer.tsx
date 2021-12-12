@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import MountainLandscapes from "./MountainLandscapes";
 import {mountainStatus, sendBasketTh } from "../../../../../../redux/canvasReducer";
 import { PaitingsType } from "../../../../../../redux/canvasData";
+import { AppStateType } from "../../../../../../redux/store";
 
 type MapStateToProps = {
     mountainLandscapes: Array<PaitingsType>
@@ -18,7 +19,7 @@ const MountainContainer: React.FC<PropsTypeMountain> = (props) => {
     return <MountainLandscapes {...props} />
 }
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: AppStateType) => {
     return{
         mountainLandscapes: state.canvasReduser.mountainLandscapes
     }

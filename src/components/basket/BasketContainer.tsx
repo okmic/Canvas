@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { basketType } from "../../redux/canvasData";
 import {orderStatus, removeItemTh, landscapesStatus, mountainStatus, positiveStatus, seascapesStatus, stillLifeStatus } from "../../redux/canvasReducer";
+import { AppStateType } from "../../redux/store";
 import ScrollToTop from "../../ScrollToTop/ScrollToTop";
 import PreloaderContainerHesh from "../common/Preloader/PreloaderContainer";
 import Basket from "./Basket";
@@ -66,13 +67,13 @@ let BasketContainer: React.FC<MapStatePropsType & MapDispatchPropsType | any> = 
     )
 } 
 
-const mapStateToProps = (state: any): MapStatePropsType => {
+const mapStateToProps = (state: AppStateType): MapStatePropsType => {
     return {
         paintings: state.canvasReduser.basket,
         order: state.canvasReduser.order,
     }
 }
 
-export default connect<MapStatePropsType, MapDispatchPropsType>(mapStateToProps, {
+export default connect(mapStateToProps, {
     removeItemTh, orderStatus, landscapesStatus, mountainStatus, seascapesStatus, stillLifeStatus, positiveStatus}
     )(BasketContainer)

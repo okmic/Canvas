@@ -1,7 +1,8 @@
 import React from "react";
-import { connect } from "react-redux";
+import { connect, MapDispatchToProps } from "react-redux";
 import { PaitingsType } from "../../../../../../redux/canvasData";
 import {sendBasketTh, landscapesStatus } from "../../../../../../redux/canvasReducer";
+import { AppStateType } from "../../../../../../redux/store";
 import Landscapes from "./Landscapes";
 
 type MapStateToProps = {
@@ -19,7 +20,7 @@ const LandscapesContainer: React.FC<PropsTypeLandscapes> = (props) => {
     return <Landscapes {...props} />
 }
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: AppStateType) => {
     return{
         landscapes: state.canvasReduser.landscapes
     }

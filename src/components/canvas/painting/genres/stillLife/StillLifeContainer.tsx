@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { PaitingsType } from "../../../../../redux/canvasData";
 import {sendBasketTh, stillLifeStatus } from "../../../../../redux/canvasReducer";
+import { AppStateType } from "../../../../../redux/store";
 import StillLife from "./StillLife";
 
 type mapPropsType = {
@@ -22,7 +23,7 @@ const StillLifeContainer: React.FC<PropsTypeStillLife> = (props) => {
     />
 }
 
-const mapStateToProps = (state: any): mapPropsType => {
+const mapStateToProps = (state: AppStateType): mapPropsType => {
     return{
         stillLife: state.canvasReduser.stillLife
     }

@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { PaitingsType } from "../../../../../redux/canvasData";
 import {positiveStatus, sendBasketTh } from "../../../../../redux/canvasReducer";
+import { AppStateType } from "../../../../../redux/store";
 import Positive from "./Positive";
 
 type MapStateToProps = {
@@ -18,7 +19,7 @@ const PositiveContainer: React.FC<PropsTypePositive> = (props) => {
     return <Positive {...props} />
 }
 
-const mapStateToProps = (state: any): MapStateToProps  => {
+const mapStateToProps = (state: AppStateType): MapStateToProps  => {
     return{
         positive: state.canvasReduser.positive
     }

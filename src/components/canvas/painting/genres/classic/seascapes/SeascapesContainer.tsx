@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Seascapes from "./Seascapes";
 import {seascapesStatus, sendBasketTh } from "../../../../../../redux/canvasReducer";
 import { PaitingsType } from "../../../../../../redux/canvasData";
+import { AppStateType } from "../../../../../../redux/store";
 
 type MapStateToProps = {
     seascapes: Array<PaitingsType>
@@ -17,7 +18,7 @@ const SeascapesContainer: React.FC<PropsTypeSeascapes> = (props) => {
     return <Seascapes {...props} />
 }
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: AppStateType) => {
     return{
         seascapes: state.canvasReduser.seascapes
     }
