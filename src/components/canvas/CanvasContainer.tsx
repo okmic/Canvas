@@ -12,4 +12,4 @@ type PropsType = {
 }
 const MapStateToProps = (state: AppStateType): PropsType => ({genres: state.canvasReduser.genres})
 
-export default connect(MapStateToProps)(PaintingsContainer)
+export default connect<PropsType, {}, {}, AppStateType>(MapStateToProps)(PaintingsContainer)

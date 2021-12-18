@@ -17,4 +17,4 @@ const mapStateToProps = (state: AppStateType):MapStateToPropsFooter => {
     }
 }
 
-export default React.memo(connect(mapStateToProps)(FooterContainer))
+export default React.memo(connect<MapStateToPropsFooter, {}, {}, AppStateType>(mapStateToProps)(FooterContainer))

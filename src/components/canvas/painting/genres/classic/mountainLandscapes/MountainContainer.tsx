@@ -26,4 +26,4 @@ const mapStateToProps = (state: AppStateType) => {
 }
 
 
-export default connect(mapStateToProps, {sendBasketTh, mountainStatus})(MountainContainer)
+export default connect<MapStateToProps, DispatchType, {}, AppStateType>(mapStateToProps, {sendBasketTh, mountainStatus})(MountainContainer)

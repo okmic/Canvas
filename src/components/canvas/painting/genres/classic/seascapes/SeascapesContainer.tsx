@@ -24,4 +24,4 @@ const mapStateToProps = (state: AppStateType) => {
     }
 }
 
-export default connect(mapStateToProps, {sendBasketTh, seascapesStatus})(SeascapesContainer)
+export default connect<MapStateToProps, DispatchType, {}, AppStateType>(mapStateToProps, {sendBasketTh, seascapesStatus})(SeascapesContainer)

@@ -1,5 +1,5 @@
 import React from "react";
-import { connect, MapDispatchToProps } from "react-redux";
+import { connect } from "react-redux";
 import { PaitingsType } from "../../../../../../redux/canvasData";
 import {sendBasketTh, landscapesStatus } from "../../../../../../redux/canvasReducer";
 import { AppStateType } from "../../../../../../redux/store";
@@ -26,4 +26,4 @@ const mapStateToProps = (state: AppStateType) => {
     }
 }
 
-export default connect(mapStateToProps, {sendBasketTh, landscapesStatus})(LandscapesContainer)
+export default connect<MapStateToProps, DispatchType, {}, AppStateType>(mapStateToProps, {sendBasketTh, landscapesStatus})(LandscapesContainer)

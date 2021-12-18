@@ -25,4 +25,4 @@ const mapStateToProps = (state: AppStateType): MapStateToProps  => {
     }
 }
 
-export default connect(mapStateToProps, {sendBasketTh, positiveStatus})(PositiveContainer)
+export default connect<MapStateToProps, DispatchType, {}, AppStateType>(mapStateToProps, {sendBasketTh, positiveStatus})(PositiveContainer)

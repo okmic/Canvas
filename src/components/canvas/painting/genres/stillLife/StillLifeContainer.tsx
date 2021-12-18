@@ -29,4 +29,4 @@ const mapStateToProps = (state: AppStateType): mapPropsType => {
     }
 }
 
-export default connect(mapStateToProps, {sendBasketTh, stillLifeStatus})(StillLifeContainer)
+export default connect<mapPropsType, DispatchType, {}, AppStateType>(mapStateToProps, {sendBasketTh, stillLifeStatus})(StillLifeContainer)

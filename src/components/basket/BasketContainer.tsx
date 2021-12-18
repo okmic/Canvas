@@ -74,6 +74,6 @@ const mapStateToProps = (state: AppStateType): MapStatePropsType => {
     }
 }
 
-export default connect(mapStateToProps, {
+export default connect<MapStatePropsType, MapDispatchPropsType, {}, AppStateType>(mapStateToProps, {
     removeItemTh, orderStatus, landscapesStatus, mountainStatus, seascapesStatus, stillLifeStatus, positiveStatus}
     )(BasketContainer)

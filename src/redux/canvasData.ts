@@ -81,12 +81,11 @@ import img74 from '../components/img/canvas/img_74.jpg'
 import img75 from '../components/img/canvas/img_75.jpg'
 import img76 from '../components/img/canvas/img_76.jpg'
 
-type basketDataType = {
+export type basketType = {
     id: number
     imgName: string
     title: string
 }
-export type basketType = basketDataType
 
 export type GenresType = {
     id: number
