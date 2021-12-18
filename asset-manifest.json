@@ -2,9 +2,9 @@
   "files": {
     "static/js/0.320419d5.chunk.js": "/Canvas/static/js/0.320419d5.chunk.js",
     "static/js/0.320419d5.chunk.js.map": "/Canvas/static/js/0.320419d5.chunk.js.map",
-    "main.css": "/Canvas/static/css/main.b4f39843.chunk.css",
-    "main.js": "/Canvas/static/js/main.e9c6ea75.chunk.js",
-    "main.js.map": "/Canvas/static/js/main.e9c6ea75.chunk.js.map",
+    "main.css": "/Canvas/static/css/main.d22c62a7.chunk.css",
+    "main.js": "/Canvas/static/js/main.d0daa73f.chunk.js",
+    "main.js.map": "/Canvas/static/js/main.d0daa73f.chunk.js.map",
     "runtime-main.js": "/Canvas/static/js/runtime-main.0739718c.js",
     "runtime-main.js.map": "/Canvas/static/js/runtime-main.0739718c.js.map",
     "static/js/3.3636c76b.chunk.js": "/Canvas/static/js/3.3636c76b.chunk.js",
@@ -30,7 +30,7 @@
     "static/css/6.fe51ceb3.chunk.css.map": "/Canvas/static/css/6.fe51ceb3.chunk.css.map",
     "static/css/7.fe51ceb3.chunk.css.map": "/Canvas/static/css/7.fe51ceb3.chunk.css.map",
     "static/css/8.fe51ceb3.chunk.css.map": "/Canvas/static/css/8.fe51ceb3.chunk.css.map",
-    "static/css/main.b4f39843.chunk.css.map": "/Canvas/static/css/main.b4f39843.chunk.css.map",
+    "static/css/main.d22c62a7.chunk.css.map": "/Canvas/static/css/main.d22c62a7.chunk.css.map",
     "static/js/3.3636c76b.chunk.js.LICENSE.txt": "/Canvas/static/js/3.3636c76b.chunk.js.LICENSE.txt",
     "static/media/404.af59d965.png": "/Canvas/static/media/404.af59d965.png",
     "static/media/back_1.9a1946d8.jpg": "/Canvas/static/media/back_1.9a1946d8.jpg",
@@ -127,7 +127,7 @@
   "entrypoints": [
     "static/js/runtime-main.0739718c.js",
     "static/js/3.3636c76b.chunk.js",
-    "static/css/main.b4f39843.chunk.css",
-    "static/js/main.e9c6ea75.chunk.js"
+    "static/css/main.d22c62a7.chunk.css",
+    "static/js/main.d0daa73f.chunk.js"
   ]
 }
