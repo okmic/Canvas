@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './contact.css';
 import logok from '../img/logok.jpg'
 import PreloaderContainerHesh from '../common/Preloader/PreloaderContainer';
+import { timeout } from '../common/timeout';
 
 
 const Contact = () => {
@@ -9,14 +10,7 @@ const Contact = () => {
     const [completed, setCompleted] = useState(false)
 
     useEffect(() => {
-    setTimeout(
-        () => {
-            setLoading(true)
-            setTimeout(
-                () => {
-                   setCompleted(true)
-                }, 200)
-        }, 500)
+        timeout(setLoading, setCompleted, 200, 500)
 }, [loading])
 
     return (

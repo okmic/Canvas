@@ -5,6 +5,7 @@ import koni from '../img/koni.jpg'
 import Content from './Content/Content';
 import Contact from '../contact/Contact';
 import PreloaderOut from '../common/Preloader/Preloader';
+import { timeoutOne } from '../common/timeout';
 
 
 const Home = React.memo(props => {
@@ -12,10 +13,7 @@ const Home = React.memo(props => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        setTimeout(
-            () => {
-                setLoading(false)
-            }, 900)
+        timeoutOne(setLoading, 900)
     }, [loading])
 
     return (

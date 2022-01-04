@@ -3,15 +3,14 @@ import PreloaderIn from "../../../../../common/Preloader/inPreloader";
 import CanvasData from "../../../accessories/CanvasData";
 import Breadcrumbs from '../../../../../common/Breadcrumbs/Breadcrumbs'
 import { PropsTypeLandscapes } from "./LandscapesContainer";
+import { timeoutOne } from "../../../../../common/timeout";
 
 const Landscapes: React.FC<PropsTypeLandscapes> = (props) => {
 
     const [loading, setLoading] = useState(true)
 
     useEffect(() =>{
-        setTimeout(() => {
-            setLoading(false)
-        }, 1150)
+        timeoutOne(setLoading, 1150)
     }, [props.landscapes])
 
     return (

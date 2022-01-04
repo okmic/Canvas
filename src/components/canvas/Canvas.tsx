@@ -5,6 +5,7 @@ import PreloaderOut from '../common/Preloader/Preloader';
 import ScrollToTop from '../../ScrollToTop/ScrollToTop';
 import { GenresType } from '../../redux/canvasData';
 import GenresContainer from './painting/genres/GenresContainer';
+import { timeoutOne } from '../common/timeout';
 
 type PropsType = {
     genres: Array<GenresType>
@@ -14,9 +15,7 @@ const Paintings: React.FC<PropsType> = (props) => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        setTimeout(() => {
-            setLoading(false)
-        }, 900)
+        timeoutOne(setLoading, 900)
     }, [loading])
 
     return (

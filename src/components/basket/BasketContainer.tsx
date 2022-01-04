@@ -5,6 +5,7 @@ import {orderStatus, removeItemTh, landscapesStatus, mountainStatus, positiveSta
 import { AppStateType } from "../../redux/store";
 import ScrollToTop from "../../ScrollToTop/ScrollToTop";
 import PreloaderContainerHesh from "../common/Preloader/PreloaderContainer";
+import { timeout } from "../common/timeout";
 import Basket from "./Basket";
 
 type MapStatePropsType = {
@@ -31,14 +32,7 @@ let BasketContainer: React.FC<MapStatePropsType & MapDispatchPropsType | any> = 
     const totalPrice = props.paintings.reduce((total: number, item: {price: number}) => total + item.price, 0)
 
     useEffect(() => {
-        setTimeout(
-            () => {
-                setLoading(true)
-                setTimeout(
-                    () => {
-                       setCompleted(true)
-                    }, 200)
-            }, 500)
+        timeout(setLoading, setCompleted, 200, 500)
     }, [loading])
 
     const removeItem = (id: number) => {

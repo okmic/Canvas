@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Breadcrumbs from "../../../../common/Breadcrumbs/Breadcrumbs"
 import PreloaderIn from "../../../../common/Preloader/inPreloader"
+import { timeoutOne } from "../../../../common/timeout"
 import CanvasData from "../../accessories/CanvasData"
 import { PropsTypePositive } from "./PositiveContainer"
 
@@ -11,9 +12,7 @@ const Positive: React.FC<PropsTypePositive> = (props) => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() =>{
-        setTimeout(() => {
-            setLoading(false)
-        }, 1150)
+        timeoutOne(setLoading, 1150)
     }, [props.positive])
 
     return (
