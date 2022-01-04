@@ -9,21 +9,21 @@ type PropsType = {
     title: string
     activeBasket?: boolean | undefined
 }
-const Item: React.FC<PropsType> = (props) =>  <NavLink to={props.path}>
-            <div className={styles.links__container}>
-            <div className={styles.links__icon}>
-            <props.children /> 
+const Item: React.FC<PropsType> = (props) => <NavLink to={props.path}>
+    <div className={styles.links__container}>
+        <div className={styles.links__icon}>
+            <props.children />
             {props.activeBasket && props.number > 0 ?
-            <sup className={!props.activeBasket ? styles.links__sup : styles.links__sup + " " + styles.active}>
-                {"+" + props.number}
-            </sup>
-            : ""
-            } 
-            </div>
-            <div className={styles.links__description}>
-                <span>{props.title}</span>
-            </div>
-            </div>
+                <sup className={!props.activeBasket ? styles.links__sup : styles.links__sup + " " + styles.active}>
+                    {"+" + props.number}
+                </sup>
+                : ""
+            }
+        </div>
+        <div className={styles.links__description}>
+            <span>{props.title}</span>
+        </div>
+    </div>
 </NavLink>
 
 export default Item

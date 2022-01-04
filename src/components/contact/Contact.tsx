@@ -20,9 +20,9 @@ const Contact = () => {
             <img src={logok} alt="Art Fine on Canvas" className="logoContact"/>
            <div className="boxDate">
             <div className="infoContact">
-                <h3>Наши контактные данные:</h3>
-                <h4>Наш адрес:</h4>
-                <h5>Россия, Карачаево-Черкесская Республика, Черкесск, Комсомольская улица, 40</h5>
+                <h3>Our contact details:</h3>
+                <h4>Our address:</h4>
+                <h5>Russia, Karachay-Cherkess Republic, Cherkessk, Komsomolskaya street, 40</h5>
                 <h5><a href="tel:+79286587143">+7(928)658-71-43</a></h5> 
                 <h5><a href="tel:+79887132617">+7(988)713-26-17</a></h5> 
                 <h5><a href="mailto:canvas@bk.ru">Canvas@bk.ru</a></h5>

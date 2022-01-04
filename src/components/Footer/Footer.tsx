@@ -20,10 +20,10 @@ const Footer: React.FC<MapStateToPropsFooter > = (props) => {
 
     return (
         <footer className={styles.header}>
-        <Item path="/Home" children={BiHome} title="Главная" />
-        <Item path="/Gallery" children={RiGalleryLine} title="Галерея" />
-        <Item path="/Contacts" children={MdCall} title="Контакты" />
-        <Item path="/Basket" children={GiBasket} title="Корзина" activeBasket={activeBasket} number={props.number} />
+        <Item path="/Home" children={BiHome} title="Main" />
+        <Item path="/Gallery" children={RiGalleryLine} title="Gallery" />
+        <Item path="/Contacts" children={MdCall} title="Contacts" />
+        <Item path="/Basket" children={GiBasket} title="Basket" activeBasket={activeBasket} number={props.number} />
         </footer>
     )
 }

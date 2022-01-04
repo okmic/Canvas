@@ -17,10 +17,10 @@ const Seascapes: React.FC<PropsTypeSeascapes> = (props) => {
         <div>
             <PreloaderIn preloaderStatus={loading} />
             <div className="this__garnes">
-                <Breadcrumbs
-                    linkOne="Главная"
-                    linkTwo="Галерея"
-                    activeLink="Морские пейзажи"
+            <Breadcrumbs
+                    linkOne="Main"
+                    linkTwo="Gallery"
+                    activeLink="Seascapes"
                 />
                 {props.seascapes.map(p => {
                     return <CanvasData

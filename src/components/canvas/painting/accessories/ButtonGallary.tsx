@@ -29,7 +29,7 @@ const ButtonGallary: React.FC<PropsType> = (props) => {
         props.buttonState
             ? <div className="basket__gallary">
             <span className="button" onClick={() => props.buttonBasket && addingPaitingInBasket(props.id,  props.imgName, props.paintingName, props.price)}>
-                <b> Добавить в <GiBasket size={19} /> </b>
+                <b> Add to <GiBasket size={19} /> </b>
             </span>
             </div> 
 

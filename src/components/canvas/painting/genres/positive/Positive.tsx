@@ -11,18 +11,18 @@ const Positive: React.FC<PropsTypePositive> = (props) => {
 
     const [loading, setLoading] = useState(true)
 
-    useEffect(() =>{
+    useEffect(() => {
         timeoutOne(setLoading, 1150)
     }, [props.positive])
 
     return (
         <div>
-        <PreloaderIn preloaderStatus={loading} />
-        <div className="this__garnes">
+            <PreloaderIn preloaderStatus={loading} />
+            <div className="this__garnes">
                 <Breadcrumbs
-                    linkOne="Главная"
-                    linkTwo="Галерея"
-                    activeLink="Позитив"
+                    linkOne="Main"
+                    linkTwo="Gallery"
+                    activeLink="Positive"
                 />
                 {props.positive.map(p => {
                     return <CanvasData
@@ -39,7 +39,7 @@ const Positive: React.FC<PropsTypePositive> = (props) => {
                 })
                 }
             </div>
-            </div>
+        </div>
     )
 }
 

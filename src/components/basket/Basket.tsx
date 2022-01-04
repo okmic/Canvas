@@ -51,13 +51,13 @@ let Basket: React.FC<PropsType> = (props) => {
                     <div className={s.basket_null}>
                         <div className={s.basket_null + " " + s.null_description}>
                             <GiBasket size="50" />
-                            <h3>В вашей корзине пока ничего нет</h3>
+                            <h3>There is nothing in your cart yet.</h3>
                         </div>
                         <button className={s.button + " " + s.button_translete} >
                             <NavLink to="/Gallery" className={s.button_null} >
                                 <RiGalleryLine size="30" />
                                 <span>&larr;</span>
-                                <span>В галерею</span>
+                                <span>To the gallery</span>
                             </NavLink>
                         </button>
                     </div>
@@ -70,7 +70,7 @@ let Basket: React.FC<PropsType> = (props) => {
                             </div>
                             <div className={s.description}>
                                 <span className={s.description__name}>{p.paintingName}</span>
-                                <span>{p.price} &#8381; </span>
+                                <span>{p.price} $ </span>
                             </div>
                         </div>
                         <div className={s.close}  >

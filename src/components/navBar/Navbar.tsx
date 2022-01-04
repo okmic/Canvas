@@ -29,10 +29,10 @@ function Navbar() {
               <AiIcons.AiOutlineClose />
             </Link>
           </li>
-        <Item path="/Home" children={BiHome} title="Главная" />
-        <Item path="/Gallery" children={RiGalleryLine} title="Галерея" />
-        <Item path="/Contacts" children={MdCall} title="Контакты" />
-        <Item path="/Basket" children={GiBasket} title="Корзина"  />
+        <Item path="/Home" children={BiHome} title="Main" />
+        <Item path="/Gallery" children={RiGalleryLine} title="Gallery" />
+        <Item path="/Contacts" children={MdCall} title="Contacts" />
+        <Item path="/Basket" children={GiBasket} title="Basket"  />
         </ul>
       </nav>
     </>

@@ -18,9 +18,9 @@ const Landscapes: React.FC<PropsTypeLandscapes> = (props) => {
         <PreloaderIn preloaderStatus={loading} />
         <div className="this__garnes">
         <Breadcrumbs 
-        linkOne="Главная"
-        linkTwo="Галерея"
-        activeLink="Пейзажи"
+        linkOne="Main"
+        linkTwo="Gallery"
+        activeLink="Landscapes"
             />
             {props.landscapes.map(p => {
                 return <CanvasData

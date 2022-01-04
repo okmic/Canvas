@@ -26,7 +26,7 @@ const Home = React.memo(props => {
                 </div>
                 <div className="title">
                     <div className="borderBlack">
-                        <span>Добро пожаловать</span>
+                        <span>Welcome</span>
                     </div>
                 </div>
                 <div className="koni">

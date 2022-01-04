@@ -18,9 +18,9 @@ const StillLife: React.FC<PropsTypeStillLife> = (props) => {
             <PreloaderIn preloaderStatus={loading} />
             <div className="this__garnes">
                 <Breadcrumbs
-                    linkOne="Главная"
-                    linkTwo="Галерея"
-                    activeLink="Натюрморты"
+                    linkOne="Main"
+                    linkTwo="Gallery"
+                    activeLink="Still Life"
                 />
                 {props.stillLife.map(p => {
                     return <CanvasData

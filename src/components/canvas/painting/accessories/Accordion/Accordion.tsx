@@ -17,7 +17,7 @@ const Accordion: React.FC<PropsType> = (props) => {
             <div className={styles.accordion_title} >
                <div >
                     <li>{props.paintingName}</li>
-                    <li>{props.price} &#8381;</li>
+                    <li>{props.price} $ </li>
                     <li>{props.description.meterial}</li>
                     <li>{props.description.size}</li>  
                 </div>

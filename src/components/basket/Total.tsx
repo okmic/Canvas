@@ -12,19 +12,19 @@ let Total: React.FC<PropsType> = (props) => {
     return (
         <div className={s.basket__total}>
             <div className={s.total}>
-                <h3>Итого:</h3>
-                <h3 className={s.total__price}>{props.totalPrice} &#8381;</h3>
+                <h3>Total:</h3>
+                <h3 className={s.total__price}>{props.totalPrice} $ </h3>
             </div>
             <div className={s.length}>
-                <h5>{props.lengthPaint} {props.lengthPaint > 1 ? "товара" : "товар"}</h5>
+                <h5>{props.lengthPaint} {props.lengthPaint > 1 ? "products" : "product"}</h5>
             </div>
             {
                 !props.order
                     ? <div className={s.basket_submit}>
-                        <button onClick={() => props.removeOrderStatus()} className={s.submit__order}>ОФОРМИТЬ ЗАКАЗ</button>
+                        <button onClick={() => props.removeOrderStatus()} className={s.submit__order}>TO ORDER</button>
                     </div>
                     : <div className={s.basket_submit}>
-                        <button onClick={() => props.removeOrderStatus()} className={s.submit__order_active}>Отменить</button>
+                        <button onClick={() => props.removeOrderStatus()} className={s.submit__order_active}>Cancel</button>
                     </div>
             }
             {props.order && <FormBasketContainer order={props.order} />}
