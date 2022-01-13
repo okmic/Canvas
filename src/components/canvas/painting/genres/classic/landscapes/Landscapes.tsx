@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import PreloaderIn from "../../../../../common/Preloader/inPreloader";
 import CanvasData from "../../../accessories/CanvasData";
 import Breadcrumbs from '../../../../../common/Breadcrumbs/Breadcrumbs'
 import { PropsTypeLandscapes } from "./LandscapesContainer";
 import { timeoutOne } from "../../../../../common/timeout";
+import PreloaderOut from "../../../../../common/Preloader/Preloader";
 
 const Landscapes: React.FC<PropsTypeLandscapes> = (props) => {
 
@@ -15,7 +15,7 @@ const Landscapes: React.FC<PropsTypeLandscapes> = (props) => {
 
     return (
         <div>
-        <PreloaderIn preloaderStatus={loading} />
+        <PreloaderOut preloaderStatus={loading} />
         <div className="this__garnes">
         <Breadcrumbs 
         linkOne="Main"

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import Breadcrumbs from "../../../../common/Breadcrumbs/Breadcrumbs"
-import PreloaderIn from "../../../../common/Preloader/inPreloader"
+import PreloaderOut from "../../../../common/Preloader/Preloader"
 import { timeoutOne } from "../../../../common/timeout"
 import CanvasData from "../../accessories/CanvasData"
 import { PropsTypePositive } from "./PositiveContainer"
@@ -17,7 +17,7 @@ const Positive: React.FC<PropsTypePositive> = (props) => {
 
     return (
         <div>
-            <PreloaderIn preloaderStatus={loading} />
+            <PreloaderOut preloaderStatus={loading} />
             <div className="this__garnes">
                 <Breadcrumbs
                     linkOne="Main"

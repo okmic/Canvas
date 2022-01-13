@@ -9,6 +9,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+::-webkit-scrollbar {
+  width: 11px; /* ширина для вертикального скролла */
+  height: 5px; /* высота для горизонтального скролла */
+  background-color: rgb(	150, 75, 0);
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #31190e;
+  border-radius: 16em;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
