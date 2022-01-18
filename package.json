@@ -2,7 +2,7 @@
   "name": "canvas-gh",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alpha-lucky.github.io/Canvas/",
+  "homepage": "https://okmic.github.io/Canvas/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
