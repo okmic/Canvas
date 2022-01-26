@@ -24,6 +24,7 @@ const Landscapes: React.FC<PropsTypeLandscapes> = (props) => {
             />
             {props.landscapes.map(p => {
                 return <CanvasData
+                    key={p.id}
                     id={p.id}
                     sendBasketTh={props.sendBasketTh}
                     imgName={p.imgName}

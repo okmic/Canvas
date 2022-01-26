@@ -1,11 +1,12 @@
 footer {
     max-height: 100px;
-    width: 100vw;
-    max-width: 2500px;
+    max-width: 100%;
+    max-width: 1900px;
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
+    margin: 0 auto;
     background: rgba(150, 75, 0, 0.747);;
     display: flex;
     align-items: center;
