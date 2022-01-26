@@ -1,0 +1,18 @@
+.imgContent{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    max-height: 100%;
+    max-width: 270px;
+    margin: 30px 50px;
+
+}
+.imgContent img {
+    max-width: 250px;
+    max-height: 250px;
+    border: 3px solid burlywood;
+}
+.imgContent__span {
+    margin: 15px;
+    border-top: tomato 3px solid;
+}

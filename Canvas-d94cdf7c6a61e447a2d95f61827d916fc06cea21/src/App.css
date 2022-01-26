@@ -1,0 +1,84 @@
+.container__app{
+  max-width: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.contOne {
+  width: 100%;
+  max-height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.conteinerContent {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0 auto 70px auto ;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.button, input {
+  background-color: rgba(13, 13, 13, 0.445);
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  padding: 7px;
+  cursor: pointer;
+  transition: 1s;
+}
+.button:hover {
+  background-color: rgb(0, 0, 0);
+  transition: 1s;
+}
+input:hover {
+  background-color: rgb(0, 0, 0);
+  transition: 1s;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a.active{color:#89b3e4; font-weight: 900;}
+a:hover{
+  transition: 1s;
+ color: #89b3e4;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 79px;
+  right: 5%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  z-index: 1;
+  animation: scrollToTop 1s 1 forwards;
+  color: #7a2929;
+}
+
+@keyframes scrollToTop {
+  0%{transform: translateX(70px);}
+  100%{transform: translateX(0px);}
+}

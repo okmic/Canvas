@@ -1,0 +1,57 @@
+.accordion_container{
+    text-align: left;
+
+}
+
+.accordion_title {
+    text-align: right;
+}
+.accordion_title ul li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.description__container{
+    transition: 1s;
+}
+
+.accordion_description{
+    padding: 5px;
+    margin-top: 15px;
+    background-color: #000000;
+    max-width: 350px;
+    border-bottom: white 1px solid;
+    border-left: white 1px solid;
+    border-right: white 1px solid;
+    border-radius: 15px;
+    font-size: 15px;
+    opacity:0;
+    transition: 1s; 
+    animation: show 1s 1 forwards; 
+}
+
+
+.title_event_accordion{
+    cursor: pointer;
+}
+.title_event_accordion:hover {
+    transition: 0.5s;
+    color: #89b3e4;
+}
+
+@keyframes show{
+    0%{
+    opacity:1;
+    transform: translateY(-50px);
+    }
+    100% {
+    opacity:1;
+    transform: translateY(0);
+    }
+    }
+
+@media screen and (max-width: 750px) {
+    .accordion_title {
+        text-align: left;
+    }
+}
