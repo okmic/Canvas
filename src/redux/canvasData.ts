@@ -108,24 +108,24 @@ export type PaitingsType = {
 export type InitialStateType = {
     basket: Array<basketType>
     genres: Array<GenresType>
-    landscapes: Array<PaitingsType>
-    mountainLandscapes: Array<PaitingsType>
-    seascapes: Array<PaitingsType>
-    stillLife: Array<PaitingsType>
-    positive: Array<PaitingsType>
+    paintings: Array<PaitingsType>
     order: boolean
 }
-
+/* <button onClick={() => Genres(0, 200)}>Landscapes</button>
+<button onClick={() => Genres(200, 300)}>Mountain landscapes</button>
+<button onClick={() => Genres(300, 400)}>Seascapes</button>
+<button onClick={() => Genres(400, 500)}>Still lifes</button>
+<button onClick={() => Genres(500, 1000)}>Positive</button> */
 const initialState: InitialStateType = {
     basket: [] as Array<basketType>,
     genres:[
-        {id: 1, imgName: back1, title: "Landscapes", url: "/Gallary/Landscapes"},
-        {id: 2, imgName: back2, title: "Mountain landscapes", url: "/Gallary/Mountain-landscapes"},
-        {id: 3, imgName: back3, title: "Seascapes", url: "/Gallary/Seascapes"},
-        {id: 4, imgName: back4, title: "Still lifes", url: "/Gallary/Still-life"},
-        {id: 5, imgName: back5, title: "Positive", url: "/Gallary/Positive"}
+        {id: 100, imgName: back1, title: "Landscapes", url: "/Gallary/Landscapes"},
+        {id: 200, imgName: back2, title: "Mountain landscapes", url: "/Gallary/Mountain-landscapes"},
+        {id: 300, imgName: back3, title: "Seascapes", url: "/Gallary/Seascapes"},
+        {id: 400, imgName: back4, title: "Still lifes", url: "/Gallary/Still-life"},
+        {id: 500, imgName: back5, title: "Positive", url: "/Gallary/Positive"}
     ] as Array<GenresType>,
-    landscapes:[
+    paintings:[
         { id: 101, imgName: img1, paintingName: "Birch trees lit by the sun", price: 1000, buttonState: true,  description: {meterial: "Oil on canvas", size: "Size: 55х74"} },
         { id: 107, imgName: img7, paintingName: "Oaks of Peter the Great", price: 10000, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 75х117"} },
         { id: 111, imgName: img11, paintingName: "Poppies", price: 900, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 60х80"} },
@@ -160,17 +160,13 @@ const initialState: InitialStateType = {
         { id: 165, imgName: img65, paintingName: "Mighty forest", price: 900, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 60х70"} },
         { id: 174, imgName: img74, paintingName: "Bright autumn", price: 1100, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 73х92"} },
         { id: 175, imgName: img75, paintingName: "Green river", price: 900, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 60х80"} },
-        { id: 176, imgName: img76, paintingName: "Oak trees", price: 900, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 55х74"} }
-    ],
-    mountainLandscapes:[
+        { id: 176, imgName: img76, paintingName: "Oak trees", price: 900, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 55х74"} },
         { id: 209, imgName: img9, paintingName: "Mountain landscape", price: 1300, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 60х93"} },
         { id: 230, imgName: img30, paintingName: "Lonely mountain", price: 700, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 60х70"} },
         { id: 236, imgName: img36, paintingName: "Dreaming of distant expanses", price: 1300, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 55х75"} },
         { id: 250, imgName: img50, paintingName: "Hillside", price: 1100, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 73х92"} },
         { id: 260, imgName: img60, paintingName: "Hut by the mountains", price: 1300, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 55х75"} },
         { id: 269, imgName: img69, paintingName: "The hut by the waterfall", price: 800, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 70х80"} },
-    ],
-    seascapes:[
         { id: 304, imgName: img4, paintingName: "Cote d'azur", price: 1200, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 66х77"} },
         { id: 313, imgName: img13, paintingName: "Coast", price: 900, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 60х70"} },
         { id: 316, imgName: img16, paintingName: "Sea sunset", price: 1100, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 60х70"} },
@@ -183,9 +179,6 @@ const initialState: InitialStateType = {
         { id: 354, imgName: img54, paintingName: "Pink tree by the sea", price: 700, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 60х70"} },
         { id: 356, imgName: img56, paintingName: "Early morning in the bay", price: 1200, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 66х77"} },
         { id: 357, imgName: img57, paintingName: "Stone coast", price: 800, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 70х80"} },
-
-    ],
-    stillLife:[
         { id: 402, imgName: img2, paintingName: "Flowers on a silver background", price: 700, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 60х70"} },
         { id: 403, imgName: img3, paintingName: "Flowers on the table", price: 1000, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 61х91"} },
         { id: 405, imgName: img5, paintingName: "Bright flowers", price: 800, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 70х80"} },
@@ -196,10 +189,7 @@ const initialState: InitialStateType = {
         { id: 448, imgName: img48, paintingName: "White fantasyя", price: 1300, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 55х75"} },
         { id: 462, imgName: img62, paintingName: "Wine fate", price: 1100, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 73х92"} },
         { id: 466, imgName: img66, paintingName: "Berry still life", price: 700, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 60х70"} },
-        { id: 470, imgName: img70, paintingName: "Golden Collection", price: 900, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 55х74"} }
-
-    ],
-    positive:[
+        { id: 470, imgName: img70, paintingName: "Golden Collection", price: 900, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 55х74"} },
         { id: 508, imgName: img8, paintingName: "Not a dream", price: 1300, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 55х75"} },
         { id: 510, imgName: img10, paintingName: "To the light", price: 1100, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 73х92"} },
         { id: 512, imgName: img12, paintingName: "There is not enough sausage for everyone", price: 900, buttonState: true, description: {meterial: "Oil on canvas", size: "Size 55х74"} },

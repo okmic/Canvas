@@ -4,11 +4,11 @@ const SEND_BASKET = 'SEND_BASKET'
 const REMOVE_ITEM = 'REMOVE_ITEM'
 const ORDER_STATUS = 'ORDER_STATUS'
 
-const LANDSCAPES_STATUS = "LANDSCAPES_STATUS"
-const MOUNTAIN_STATUS = "MOUNTAIN_STATUS"
-const SEASCAPES_STATUS = "SEASCAPES_STATUS"
-const STILLLIFE_STATUS = "STILLLIFE_STATUS"
-const POSITIVE_STATUS = "POSITIVE_STATUS"
+const UPDATE_BUTTON_STATUS = "UPDATE_BUTTON_STATUS"
+const MORE_OR_LESS = "MORE_OR_LESS"
+const GENRES_FILTER = "GENRES_FILTER"
+const REMOVE_FILTERS = "REMOVE_FILTERS"
+
 
 const canvasReduser = (state = initialState, action: ActionsTypes) => {
     switch (action.type) {
@@ -38,28 +38,28 @@ const canvasReduser = (state = initialState, action: ActionsTypes) => {
                 order: !state.order
             }
         }
-        case LANDSCAPES_STATUS:{
-           return {...state, landscapes: state.landscapes.map(p => p.id === action.id ? { ...p, buttonState: !p.buttonState } : p)}
+        case UPDATE_BUTTON_STATUS:{
+           return {...state, paintings: state.paintings.map(p => p.id === action.id ? { ...p, buttonState: !p.buttonState } : p)}
         }
-        case MOUNTAIN_STATUS:{
-            return {...state, mountainLandscapes: state.mountainLandscapes.map(p => p.id === action.id ? { ...p, buttonState: !p.buttonState } : p)}
+        case MORE_OR_LESS: {
+            if(action.order === 'more') {
+                return {...state, paintings: state.paintings.sort((a, b) => a.price > b.price ? -1 : 1)}
+            } else {
+                return {...state, paintings: state.paintings.sort((a, b) => a.price > b.price ? 1 : -1)}
+            }
         }
-        case SEASCAPES_STATUS:{
-            return {...state, seascapes: state.seascapes.map(p => p.id === action.id ? { ...p, buttonState: !p.buttonState } : p)}
+        case GENRES_FILTER: {
+            return {...state, paintings: initialState.paintings.filter(item => item.id > action.id && item.id < action.id + 100)}
         }
-        case STILLLIFE_STATUS:{
-            return {...state, stillLife: state.stillLife.map(p => p.id === action.id ? { ...p, buttonState: !p.buttonState } : p)}
-        }
-        case POSITIVE_STATUS:{
-            return {...state, positive: state.positive.map(p => p.id === action.id ? { ...p, buttonState: !p.buttonState } : p)}
+        case REMOVE_FILTERS: {
+            return {...state, paintings: initialState.paintings.sort((a, b) => a.id > b.id ? 1 : -1)}
         }
         default:
             return state;
     }
 }
 
-type ActionsTypes = SendBasketType | RemoveItemType | OrderStatusType | LandscapesStatusType
-| MountainStatusType | SeascapesStatusType | PositiveStatusType | StillLifeStatusType
+type ActionsTypes = SendBasketType | RemoveItemType | OrderStatusType | ButtonStateType | MoreOrLessType | GenresFilterType | RemoveFiltersType
 
 type SendBasketType = {
     type: typeof SEND_BASKET
@@ -81,20 +81,17 @@ export const removeItem = (id: number):RemoveItemType => ({ type: REMOVE_ITEM, p
 type OrderStatusType = {type: typeof ORDER_STATUS}
 export const orderStatus = ():OrderStatusType => ({ type: ORDER_STATUS})
 
-type LandscapesStatusType = {type: typeof LANDSCAPES_STATUS, id: number}
-export const landscapesStatus = (id: number):LandscapesStatusType => ({ type: LANDSCAPES_STATUS, id})
+type ButtonStateType = {type: typeof UPDATE_BUTTON_STATUS, id: number}
+export const updateButtonStatus = (id: number):ButtonStateType => ({ type: UPDATE_BUTTON_STATUS, id})
 
-type MountainStatusType = {type: typeof MOUNTAIN_STATUS, id: number}
-export const mountainStatus = (id: number):MountainStatusType => ({ type: MOUNTAIN_STATUS, id})
+type MoreOrLessType = {type: typeof MORE_OR_LESS, order: "more" | 'less'}
+export const moreOrLess = (order: "more" | 'less'):MoreOrLessType => ({ type: MORE_OR_LESS, order})
 
-type SeascapesStatusType = {type: typeof SEASCAPES_STATUS, id: number}
-export const seascapesStatus = (id: number):SeascapesStatusType => ({ type: SEASCAPES_STATUS, id})
+type GenresFilterType = {type: typeof GENRES_FILTER, id: number}
+export const genresFilter = (id: number):GenresFilterType => ({ type: GENRES_FILTER, id})
 
-type StillLifeStatusType = {type: typeof STILLLIFE_STATUS, id: number}
-export const stillLifeStatus = (id: number):StillLifeStatusType => ({ type: STILLLIFE_STATUS, id})
-
-type PositiveStatusType = {type: typeof POSITIVE_STATUS, id: number}
-export const positiveStatus = (id: number):PositiveStatusType => ({ type: POSITIVE_STATUS, id})
+type RemoveFiltersType = {type: typeof REMOVE_FILTERS}
+export const removeFilters = ():RemoveFiltersType => ({ type: REMOVE_FILTERS})
 
 type DispatchType = Dispatch<ActionsTypes>
 
@@ -105,6 +102,7 @@ export const sendBasketTh = (
     price: number) => (dispatch: DispatchType) => {
     dispatch(sendBasket(id, imgName, paintingName, price));
 }
+
 export const removeItemTh = (id: number) => (dispatch: DispatchType) => {
     dispatch(removeItem(id))
 }

@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import './canvas.css';
 import logo from '../img/logok.jpg';
 import PreloaderOut from '../common/Preloader/Preloader';
 import ScrollToTop from '../../ScrollToTop/ScrollToTop';
-import { GenresType } from '../../redux/canvasData';
-import GenresContainer from './painting/genres/GenresContainer';
 import { timeoutOne } from '../common/timeout';
+import Landscapes from './Landscapes';
+import { CanvasPropsType } from './CanvasContainer';
 
-type PropsType = {
-    genres: Array<GenresType>
-}
 
-const Paintings: React.FC<PropsType> = (props) => {
+
+const Canvas: React.FC<CanvasPropsType> = (props) => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -27,11 +25,20 @@ const Paintings: React.FC<PropsType> = (props) => {
                     <img src={logo} alt={"Fine Art on Canvas"} />
                 </div>
                 <div className='contCanvas'>
-                    <GenresContainer genres={props.genres} />
+                    <Landscapes 
+                    paintings={props.paintings}
+                    genres={props.genres}
+                    sendBasketTh={props.sendBasketTh}
+                    updateButtonStatus={props.updateButtonStatus}
+                    moreOrLess={props.moreOrLess}
+                    genresFilter={props.genresFilter}
+                    removeFilters={props.removeFilters}
+                    />
+                    {/* <GenresContainer /> */}
                 </div>
             </div>
         </div>
     )
 }
 
-export default Paintings
+export default Canvas

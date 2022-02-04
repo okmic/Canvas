@@ -1,20 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { GiBasket } from "react-icons/gi";
 import s from './Basket.module.css'
 import Total from "./Total";
 import { RiGalleryLine } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
-import Modal from "../common/Modal/Modal";
 import { PaitingsType } from "../../redux/canvasData";
 
 type PropsType = {
     totalPrice: number
     lengthPaint: number
-    landscapesStatus: (id: number) => void
-    mountainStatus: (id: number) => void
-    seascapesStatus: (id: number) => void
-    stillLifeStatus: (id: number) => void
-    positiveStatus: (id: number) => void
+    updateButtonStatus: (id: number) => void
     removeItem: (id: number) => void
     removeOrderStatus: () => void
     paintings: Array<PaitingsType>
@@ -23,27 +18,12 @@ type PropsType = {
 
 let Basket: React.FC<PropsType> = (props) => {
 
-    const [modal, setModal] = useState(false)
     
     let onChangeStatus = (id: number) => {
-            if (id > 100 && id < 200) {
-                props.landscapesStatus(id)
-            }   
-            else if(id > 200 && id < 300) {
-                props.mountainStatus(id)
-            }   
-            else if(id > 300 && id < 400) {
-                props.seascapesStatus(id)
-            }   
-            else if(id > 400 && id < 500) {
-                props.stillLifeStatus(id)
-            }  
-            else if(id > 500) {
-                props.positiveStatus(id)
-            }
-        return props.removeItem(id)
-
+        props.removeItem(id)
+        props.updateButtonStatus(id)
     }
+    
     return (
         <div className={s.basket__container}>
             {props.paintings.length < 1
@@ -62,10 +42,10 @@ let Basket: React.FC<PropsType> = (props) => {
                         </button>
                     </div>
                 </div>
-                : props.paintings.map(p =>
+                : props.paintings.map((p, index) =>
                     <div key={p.id} className={s.basket__item}>
                         <div className={s.item__box}>
-                            <div className={s.image} onClick={() => setModal(true)}>
+                            <div className={s.image}>
                                 <img src={p.imgName} alt={p.imgName} />
                             </div>
                             <div className={s.description}>
@@ -76,9 +56,6 @@ let Basket: React.FC<PropsType> = (props) => {
                         <div className={s.close}  >
                             <button className="button" onClick={() => onChangeStatus(p.id)}>&#10006;</button>
                         </div>
-                        <Modal active={modal} setActive={setModal}>
-                             <img src={p.imgName} alt={p.imgName} />
-                        </Modal>
                     </div>
                 )}
             {props.totalPrice > 0 &&
