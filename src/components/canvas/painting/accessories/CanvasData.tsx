@@ -10,13 +10,13 @@ type PropsType = {
     linkTwo?: string
     activeLink?: string
     sendBasketTh: (id: number, imgName: string, paintingName: string, price: number) => void 
-    updateButtonStatus: (id: number) => void
+    removeStatus: (id: number) => void
 }
 
 const CanvasData: React.FC<PropsType & PaitingsType> = (props) => {
     const [modal, setModal] = useState(false)
     const [buttonBasket] = useState<boolean>(true)
-
+    
     return (
         <div className='contPainting'>
             <div className="boxPainting">
@@ -24,6 +24,15 @@ const CanvasData: React.FC<PropsType & PaitingsType> = (props) => {
                     <div className="painting">
                         <LazyLoadImage onClick={() => setModal(true)} src={props.imgName} alt={props.imgName} effect="blur" />
                     </div> 
+                    <ButtonGallary 
+                    id={props.id} 
+                    removeStatus={props.removeStatus} 
+                    buttonBasket={buttonBasket} 
+                    sendBasketTh={props.sendBasketTh} 
+                    buttonState={props.buttonState} 
+                    imgName={props.imgName} 
+                    paintingName={props.paintingName} 
+                    price={props.price} />
                 </div>
                 <div className="description">
                     <ul className="description__ul">
@@ -34,15 +43,6 @@ const CanvasData: React.FC<PropsType & PaitingsType> = (props) => {
                                 description={props.description} 
                                 />
                     </ul>
-                    <ButtonGallary 
-                    id={props.id} 
-                    removeStatus={props.updateButtonStatus} 
-                    buttonBasket={buttonBasket} 
-                    sendBasketTh={props.sendBasketTh} 
-                    buttonState={props.buttonState} 
-                    imgName={props.imgName} 
-                    paintingName={props.paintingName} 
-                    price={props.price} />
                 </div>
                 <Modal active={modal} setActive={setModal}>
                     <img src={props.imgName} alt={props.imgName} />

@@ -6,9 +6,9 @@
 .accordion_title {
     text-align: right;
 }
-.accordion_title div li {
+.accordion_title ul li {
     list-style-type: none;
-    color: #000;
+    cursor: pointer;
 }
 
 .description__container{

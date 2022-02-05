@@ -9,7 +9,11 @@ import { PaitingsType } from "../../redux/canvasData";
 type PropsType = {
     totalPrice: number
     lengthPaint: number
-    updateButtonStatus: (id: number) => void
+    landscapesStatus: (id: number) => void
+    mountainStatus: (id: number) => void
+    seascapesStatus: (id: number) => void
+    stillLifeStatus: (id: number) => void
+    positiveStatus: (id: number) => void
     removeItem: (id: number) => void
     removeOrderStatus: () => void
     paintings: Array<PaitingsType>
@@ -17,13 +21,26 @@ type PropsType = {
 }
 
 let Basket: React.FC<PropsType> = (props) => {
-
     
     let onChangeStatus = (id: number) => {
-        props.removeItem(id)
-        props.updateButtonStatus(id)
+            if (id > 100 && id < 200) {
+                props.landscapesStatus(id)
+            }   
+            else if(id > 200 && id < 300) {
+                props.mountainStatus(id)
+            }   
+            else if(id > 300 && id < 400) {
+                props.seascapesStatus(id)
+            }   
+            else if(id > 400 && id < 500) {
+                props.stillLifeStatus(id)
+            }  
+            else if(id > 500) {
+                props.positiveStatus(id)
+            }
+        return props.removeItem(id)
+
     }
-    
     return (
         <div className={s.basket__container}>
             {props.paintings.length < 1
@@ -42,7 +59,7 @@ let Basket: React.FC<PropsType> = (props) => {
                         </button>
                     </div>
                 </div>
-                : props.paintings.map((p, index) =>
+                : props.paintings.map(p =>
                     <div key={p.id} className={s.basket__item}>
                         <div className={s.item__box}>
                             <div className={s.image}>

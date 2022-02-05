@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { basketType } from "../../redux/canvasData";
-import {orderStatus, removeItemTh, updateButtonStatus } from "../../redux/canvasReducer";
+import {orderStatus, removeItemTh, landscapesStatus, mountainStatus, positiveStatus, seascapesStatus, stillLifeStatus } from "../../redux/canvasReducer";
 import { AppStateType } from "../../redux/store";
 import ScrollToTop from "../../ScrollToTop/ScrollToTop";
 import PreloaderContainerHesh from "../common/Preloader/PreloaderContainer";
@@ -16,7 +16,13 @@ type MapStatePropsType = {
 type MapDispatchPropsType = {
     removeItemTh: (id: number) => void
     orderStatus: () => void
-    updateButtonStatus: (id: number) => void
+    landscapesStatus: (id: number) => void
+    mountainStatus: (id: number) => void
+    seascapesStatus: (id: number) => void
+    stillLifeStatus: (id: number) => void
+    positiveStatus: (id: number) => void
+    
+
 }
 
 let BasketContainer: React.FC<MapStatePropsType & MapDispatchPropsType | any> = (props) => {
@@ -49,7 +55,7 @@ let BasketContainer: React.FC<MapStatePropsType & MapDispatchPropsType | any> = 
         buttonBasketACUp={props.buttonBasketACUp} 
         removeOrderStatus={removeOrderStatus} 
         order={props.order} 
-        updateButtonStatus={props.updateButtonStatus}
+        landscapesStatus={props.landscapesStatus}
         {...props}
         />
     )
@@ -63,5 +69,5 @@ const mapStateToProps = (state: AppStateType): MapStatePropsType => {
 }
 
 export default connect<MapStatePropsType, MapDispatchPropsType, {}, AppStateType>(mapStateToProps, {
-    removeItemTh, orderStatus, updateButtonStatus}
+    removeItemTh, orderStatus, landscapesStatus, mountainStatus, seascapesStatus, stillLifeStatus, positiveStatus}
     )(BasketContainer)

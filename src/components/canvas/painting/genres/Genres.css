@@ -3,10 +3,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 900px;
 }
 .gernes_item{
     position: relative;
-    max-width: 110px;
+    max-width: 255px;
+    max-height: 180px;
     background-color: black;
     border: blanchedalmond 1px solid;
     margin: 15px;
@@ -15,8 +17,6 @@
     transition: 0.5s;
     text-align: rigth;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.308);
-    border-radius: 50%;
-    overflow: hidden;
 }
 
 .genres__link{
@@ -24,14 +24,12 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.555);
-    font-size: 19px;
+    font-size: 27px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
     text-align: center;
-    color: #fff;
-    border: none;
 }
 
 .genres__img {
@@ -41,6 +39,7 @@
 }
 .genres__img img {
     max-width: 100%;
+    height: 180px;
 }
 
 .gernes_item:hover{
@@ -54,13 +53,6 @@
     animation: shodowBox 0.7s linear 1.15s 1 forwards;
     opacity: 0;
 }
-.filters {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
 
 @keyframes shodowBox {
     0%{
@@ -69,12 +61,4 @@
     100%{
         opacity: 1;
     }
-  }
-  @media screen and (max-width: 750px) {
-      .gernes_item{
-          max-width: 90px;
-      }
-      .genres__link{
-        font-size: 15px;
-      }
   }
